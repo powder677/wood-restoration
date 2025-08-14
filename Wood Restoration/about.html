@@ -1,0 +1,414 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>About Us - Heritage Wood Restoration</title>
+   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+         font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+      }
+
+      :root {
+         --primary: #8B4513;
+         --secondary: #D2691E;
+         --accent: #CD853F;
+         --light: #F5DEB3;
+         --dark: #5D4037;
+         --text: #333333;
+         --background: #FFF8F0;
+      }
+
+      body {
+         background-color: var(--background);
+         color: var(--text);
+         line-height: 1.6;
+      }
+
+      .container {
+         max-width: 1200px;
+         margin: 0 auto;
+         padding: 0 20px;
+      }
+
+      header {
+         background: linear-gradient(135deg, var(--primary), var(--dark));
+         color: white;
+         padding: 2rem 0;
+         text-align: center;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .header-content h1 {
+         font-size: 2.8rem;
+         margin-bottom: 1rem;
+         font-weight: 300;
+         letter-spacing: 1px;
+      }
+
+      .header-content p {
+         font-size: 1.4rem;
+         font-weight: 300;
+         max-width: 700px;
+         margin: 0 auto;
+         opacity: 0.9;
+      }
+
+      .section {
+         padding: 5rem 0;
+      }
+
+      .section-title {
+         text-align: center;
+         margin-bottom: 3rem;
+      }
+
+      .section-title h2 {
+         font-size: 2.2rem;
+         color: var(--primary);
+         margin-bottom: 1rem;
+         position: relative;
+         display: inline-block;
+      }
+
+      .section-title h2::after {
+         content: '';
+         position: absolute;
+         bottom: -10px;
+         left: 50%;
+         transform: translateX(-50%);
+         width: 80px;
+         height: 3px;
+         background: var(--secondary);
+      }
+
+      .section-title p {
+         font-size: 1.1rem;
+         color: var(--dark);
+         max-width: 700px;
+         margin: 1.5rem auto 0;
+      }
+
+      .mission-content {
+         display: flex;
+         align-items: center;
+         gap: 3rem;
+         max-width: 1000px;
+         margin: 0 auto;
+      }
+
+      .mission-text {
+         flex: 1;
+      }
+
+      .mission-text p {
+         margin-bottom: 1.5rem;
+         font-size: 1.1rem;
+         line-height: 1.8;
+      }
+
+      .mission-image {
+         flex: 1;
+         border-radius: 10px;
+         overflow: hidden;
+         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .mission-image img {
+         width: 100%;
+         height: auto;
+         display: block;
+      }
+
+      .services-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         gap: 2rem;
+         margin-top: 2rem;
+      }
+
+      .service-card {
+         background: white;
+         border-radius: 10px;
+         padding: 2rem;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+         text-align: center;
+      }
+
+      .service-card:hover {
+         transform: translateY(-10px);
+         box-shadow: 0 15px 30px rgba(0, 0, 0, 0.15);
+      }
+
+      .service-icon {
+         font-size: 3rem;
+         color: var(--secondary);
+         margin-bottom: 1.5rem;
+      }
+
+      .service-card h3 {
+         font-size: 1.5rem;
+         color: var(--primary);
+         margin-bottom: 1rem;
+      }
+
+      .craftsman-section {
+         background: linear-gradient(to right, var(--primary), var(--dark));
+         color: white;
+         padding: 5rem 0;
+      }
+
+      .craftsman-content {
+         display: flex;
+         align-items: center;
+         gap: 3rem;
+         max-width: 1000px;
+         margin: 0 auto;
+      }
+
+      .craftsman-image {
+         flex: 1;
+         border-radius: 50%;
+         overflow: hidden;
+         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.3);
+      }
+
+      .craftsman-image img {
+         width: 100%;
+         height: auto;
+         display: block;
+      }
+
+      .craftsman-text {
+         flex: 1;
+      }
+
+      .craftsman-text p {
+         font-size: 1.2rem;
+         font-style: italic;
+         margin-bottom: 2rem;
+         line-height: 1.8;
+      }
+
+      .craftsman-signature {
+         font-weight: bold;
+         font-size: 1.1rem;
+         color: var(--light);
+      }
+
+      .contact-section {
+         background-color: white;
+         border-radius: 15px;
+         padding: 3rem;
+         box-shadow: 0 10px 30px rgba(0, 0, 0, 0.1);
+         max-width: 800px;
+         margin: 0 auto;
+      }
+
+      .contact-info {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+         gap: 2rem;
+         margin-top: 2rem;
+      }
+
+      .contact-item {
+         display: flex;
+         align-items: center;
+         gap: 1rem;
+      }
+
+      .contact-icon {
+         width: 50px;
+         height: 50px;
+         background: var(--light);
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         color: var(--primary);
+         font-size: 1.2rem;
+      }
+
+      .contact-details h3 {
+         color: var(--primary);
+         margin-bottom: 0.3rem;
+      }
+
+      footer {
+         background: var(--dark);
+         color: white;
+         text-align: center;
+         padding: 2rem 0;
+         margin-top: 5rem;
+      }
+
+      @media (max-width: 768px) {
+
+         .mission-content,
+         .craftsman-content {
+            flex-direction: column;
+         }
+
+         .header-content h1 {
+            font-size: 2.2rem;
+         }
+
+         .header-content p {
+            font-size: 1.1rem;
+         }
+
+         .section {
+            padding: 3rem 0;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <header>
+      <div class="container">
+         <div class="header-content">
+            <h1>About Heritage Wood Restoration</h1>
+            <p>Preserving the Past, Strengthening the Future</p>
+         </div>
+      </div>
+   </header>
+
+   <section class="section">
+      <div class="container">
+         <div class="section-title">
+            <h2>Our Mission</h2>
+            <p>20 Years of Craftsmanship Dedicated to Wood Restoration</p>
+         </div>
+         <div class="mission-content">
+            <div class="mission-text">
+               <p>I've always been fascinated by architecture — the way lines, materials, and craftsmanship come together to create something timeless. For the past 20 years, I've kept my hands in the craft through custom woodworking, remodels, and furniture builds. From shaping intricate trim details to restoring antique pieces, I've always believed that great woodwork deserves to last for generations.</p>
+               <p>After a successful career running businesses for other people, I realized it was time to take the leap and put my skills, experience, and vision to work for myself. That's how Heritage Wood Restoration was born — a dedicated service focused on wood window epoxy reconstruction and restoration.</p>
+               <p>Why? Because too many homeowners are told their only option is to replace. In reality, many of these windows and doors can be repaired — not just patched, but structurally restored — for a fraction of the cost, all while preserving the character and craftsmanship that modern replacements just can't match.</p>
+            </div>
+            <div class="mission-image">
+               <img src="https://placehold.co/500x400/8B4513/FFFFFF?text=Wood+Restoration+Work" alt="Wood Restoration Process">
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="section" style="background-color: #f9f5f0;">
+      <div class="container">
+         <div class="section-title">
+            <h2>Our Services</h2>
+            <p>Specialized Techniques for Timeless Results</p>
+         </div>
+         <div class="services-grid">
+            <div class="service-card">
+               <div class="service-icon">
+                  <i class="fas fa-window-maximize"></i>
+               </div>
+               <h3>Window Restoration</h3>
+               <p>Epoxy reconstruction of wood windows to restore structural integrity and preserve original character.</p>
+            </div>
+            <div class="service-card">
+               <div class="service-icon">
+                  <i class="fas fa-door-open"></i>
+               </div>
+               <h3>Door Repair</h3>
+               <p>Expert restoration of hand-built wood entry doors with precision matching of original profiles.</p>
+            </div>
+            <div class="service-card">
+               <div class="service-icon">
+                  <i class="fas fa-tools"></i>
+               </div>
+               <h3>Custom Woodwork</h3>
+               <p>Bespoke woodworking solutions for trim, molding, and architectural details.</p>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="craftsman-section">
+      <div class="container">
+         <div class="section-title">
+            <h2 style="color: white;">Meet Your Craftsman</h2>
+         </div>
+         <div class="craftsman-content">
+            <div class="craftsman-image">
+               <img src="https://placehold.co/400x400/D2691E/FFFFFF?text=Craftsman+Photo" alt="Founder of Heritage Wood Restoration">
+            </div>
+            <div class="craftsman-text">
+               <p>"Wood restoration is more than a trade — it's a responsibility. Every time we save an original window or door, we're keeping a piece of history alive."</p>
+               <div class="craftsman-signature">— John Smith, Founder</div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <section class="section">
+      <div class="container">
+         <div class="section-title">
+            <h2>Looking Ahead</h2>
+            <p>Building a Model for Sustainable Craftsmanship</p>
+         </div>
+         <div style="max-width: 800px; margin: 0 auto; text-align: center;">
+            <p style="font-size: 1.1rem; line-height: 1.8;">From the very beginning, I've envisioned this as more than just a one-man shop. With the right systems, training, and standards, wood window epoxy reconstruction can be scaled into a franchise model — bringing specialized restoration services to communities across the country.</p>
+            <p style="font-size: 1.1rem; line-height: 1.8; margin-top: 1.5rem;">Souderton and Telford are where it starts. The goal is simple: deliver top-tier craftsmanship, earn trust in every neighborhood we serve, and create a model that other skilled tradespeople can follow to build their own success stories.</p>
+         </div>
+      </div>
+   </section>
+
+   <section class="section">
+      <div class="container">
+         <div class="section-title">
+            <h2>Let's Talk About Your Project</h2>
+            <p>Restore Your Home's Original Charm</p>
+         </div>
+         <div class="contact-section">
+            <p style="text-align: center; font-size: 1.1rem; margin-bottom: 2rem;">Whether you're dealing with soft sills, crumbling trim, or glazing that's seen better days, I can help you restore your home's original charm without breaking the bank.</p>
+            <div class="contact-info">
+               <div class="contact-item">
+                  <div class="contact-icon">
+                     <i class="fas fa-phone"></i>
+                  </div>
+                  <div class="contact-details">
+                     <h3>Call/Text</h3>
+                     <p>(215) 555-0123</p>
+                  </div>
+               </div>
+               <div class="contact-item">
+                  <div class="contact-icon">
+                     <i class="fas fa-envelope"></i>
+                  </div>
+                  <div class="contact-details">
+                     <h3>Email</h3>
+                     <p>info@heritagewoods.com</p>
+                  </div>
+               </div>
+               <div class="contact-item">
+                  <div class="contact-icon">
+                     <i class="fas fa-map-marker-alt"></i>
+                  </div>
+                  <div class="contact-details">
+                     <h3>Serving</h3>
+                     <p>Souderton, Telford, Harleysville, Lansdale</p>
+                  </div>
+               </div>
+            </div>
+         </div>
+      </div>
+   </section>
+
+   <footer>
+      <div class="container">
+         <p>© 2023 Heritage Wood Restoration. All rights reserved.</p>
+         <p style="margin-top: 0.5rem; opacity: 0.8;">Preserving the past, strengthening the future</p>
+      </div>
+   </footer>
+</body>
+
+</html>

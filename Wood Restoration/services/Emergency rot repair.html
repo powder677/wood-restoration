@@ -1,0 +1,495 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Emergency Rot Repair Services</title>
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      body {
+         font-family: 'Open Sans', sans-serif;
+         line-height: 1.6;
+         color: #333;
+         background-color: #f8f5f0;
+      }
+
+      .header {
+         background: linear-gradient(135deg, #c00 0%, #800 100%);
+         color: white;
+         padding: 3rem 1rem;
+         text-align: center;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .header h1 {
+         font-family: 'Playfair Display', serif;
+         font-size: 2.8rem;
+         margin-bottom: 1rem;
+         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .header p {
+         font-size: 1.2rem;
+         max-width: 800px;
+         margin: 0 auto;
+         opacity: 0.9;
+      }
+
+      .container {
+         max-width: 1200px;
+         margin: 0 auto;
+         padding: 2rem;
+      }
+
+      .value-proposition {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+         border-left: 5px solid #c00;
+      }
+
+      .value-proposition h2 {
+         font-family: 'Playfair Display', serif;
+         color: #800;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .value-proposition p {
+         font-size: 1.1rem;
+         margin-bottom: 1rem;
+         line-height: 1.8;
+      }
+
+      .benefits-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         gap: 1.5rem;
+         margin: 2rem 0;
+      }
+
+      .benefit-card {
+         background: #fff0f0;
+         padding: 1.5rem;
+         border-radius: 8px;
+         border-left: 4px solid #c00;
+         transition: transform 0.3s ease;
+      }
+
+      .benefit-card:hover {
+         transform: translateY(-5px);
+      }
+
+      .benefit-card h3 {
+         color: #800;
+         margin-bottom: 0.8rem;
+      }
+
+      .process-section {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+      }
+
+      .process-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #800;
+         text-align: center;
+         margin-bottom: 2rem;
+         font-size: 2rem;
+      }
+
+      .process-steps {
+         counter-reset: step-counter;
+         margin: 2rem 0;
+      }
+
+      .step {
+         counter-increment: step-counter;
+         margin-bottom: 2rem;
+         padding-left: 3rem;
+         position: relative;
+         border-bottom: 1px dashed #f0e0e0;
+         padding-bottom: 1.5rem;
+      }
+
+      .step:last-child {
+         border-bottom: none;
+      }
+
+      .step::before {
+         content: counter(step-counter);
+         position: absolute;
+         left: 0;
+         top: 0;
+         background: #c00;
+         color: white;
+         width: 30px;
+         height: 30px;
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-weight: bold;
+      }
+
+      .step h3 {
+         color: #800;
+         margin-bottom: 0.5rem;
+      }
+
+      .urgency-section {
+         background: linear-gradient(135deg, #800 0%, #c00 100%);
+         color: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         margin-bottom: 2rem;
+         text-align: center;
+      }
+
+      .urgency-section h2 {
+         font-family: 'Playfair Display', serif;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .urgency-section p {
+         font-size: 1.1rem;
+         max-width: 800px;
+         margin: 0 auto 1.5rem;
+         line-height: 1.8;
+      }
+
+      .emergency-features {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+         gap: 1.5rem;
+         margin-top: 2rem;
+      }
+
+      .feature-card {
+         background: rgba(255, 255, 255, 0.1);
+         padding: 1.5rem;
+         border-radius: 8px;
+         border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .feature-card h3 {
+         margin-bottom: 0.8rem;
+         font-size: 1.3rem;
+      }
+
+      .gallery-section {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+      }
+
+      .gallery-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #800;
+         text-align: center;
+         margin-bottom: 2rem;
+         font-size: 2rem;
+      }
+
+      .gallery-container {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         gap: 2rem;
+         margin: 2rem 0;
+      }
+
+      .gallery-item {
+         background: #fff0f0;
+         border-radius: 10px;
+         overflow: hidden;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+         transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover {
+         transform: translateY(-5px);
+      }
+
+      .gallery-item img {
+         width: 100%;
+         height: 200px;
+         object-fit: cover;
+         border-bottom: 3px solid #c00;
+      }
+
+      .gallery-content {
+         padding: 1.5rem;
+      }
+
+      .gallery-content h3 {
+         color: #800;
+         margin-bottom: 0.8rem;
+         font-size: 1.3rem;
+      }
+
+      .testimonial-section {
+         background: white;
+         padding: 3rem;
+         border-radius: 10px;
+         text-align: center;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         border: 2px solid #c00;
+      }
+
+      .testimonial-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #800;
+         margin-bottom: 2rem;
+         font-size: 2rem;
+      }
+
+      .testimonial-content {
+         max-width: 800px;
+         margin: 0 auto;
+         font-size: 1.2rem;
+         font-style: italic;
+         line-height: 1.8;
+         color: #800;
+      }
+
+      .testimonial-content::before,
+      .testimonial-content::after {
+         content: "" ";
+ font-size: 3rem;
+         color: #c00;
+         opacity: 0.3;
+      }
+
+      .customer-name {
+         margin-top: 1.5rem;
+         font-weight: 600;
+         font-style: normal;
+         color: #333;
+      }
+
+      .customer-location {
+         font-size: 0.9rem;
+         opacity: 0.8;
+         font-style: normal;
+         color: #666;
+      }
+
+      .cta-section {
+         background: linear-gradient(135deg, #c00 0%, #800 100%);
+         color: white;
+         padding: 3rem;
+         border-radius: 10px;
+         text-align: center;
+         margin-top: 2rem;
+      }
+
+      .cta-section h2 {
+         font-family: 'Playfair Display', serif;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .cta-button {
+         display: inline-block;
+         background: white;
+         color: #800;
+         padding: 1rem 2.5rem;
+         font-size: 1.2rem;
+         text-decoration: none;
+         border-radius: 50px;
+         font-weight: 600;
+         transition: all 0.3s ease;
+         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+         border: 2px solid white;
+      }
+
+      .cta-button:hover {
+         background: transparent;
+         color: white;
+         transform: translateY(-3px);
+         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      .phone-number {
+         font-size: 1.8rem;
+         font-weight: bold;
+         margin: 1rem 0;
+         display: block;
+      }
+
+      @media (max-width: 768px) {
+         .header h1 {
+            font-size: 2.2rem;
+         }
+
+         .container {
+            padding: 1rem;
+         }
+
+         .value-proposition,
+         .process-section,
+         .urgency-section,
+         .gallery-section {
+            padding: 1.5rem;
+         }
+
+         .benefits-grid,
+         .emergency-features,
+         .gallery-container {
+            grid-template-columns: 1fr;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <header class="header">
+      <h1>Emergency Rot Repair Services</h1>
+      <p>Our specialized, proven process delivers superior results, saves you money, and protects your home's value.</p>
+   </header>
+
+   <div class="container">
+      <section class="value-proposition">
+         <h2>Immediate Response to Prevent Costly Damage</h2>
+         <p>Wood rot doesn't wait for business hours, and neither do we. Our emergency rot repair service provides rapid response to stop structural deterioration before it compromises your home's safety, value, and integrity. Whether you've discovered sudden water damage, noticed soft or crumbling wood, or are dealing with the aftermath of a storm, our 24/7 emergency service ensures immediate attention to prevent further damage and escalating costs.</p>
+         <p>Unlike temporary fixes that only delay the inevitable, our emergency rot repair combines rapid response with permanent solutions that address both the immediate problem and underlying causes. We use specialized techniques and materials to restore structural integrity quickly while preserving as much original material as possible.</p>
+
+         <div class="benefits-grid">
+            <div class="benefit-card">
+               <h3>24/7 Rapid Response</h3>
+               <p>Emergency service available around the clock to prevent further damage and structural compromise to your historic property.</p>
+            </div>
+            <div class="benefit-card">
+               <h3>Immediate Stabilization</h3>
+               <p>Quick action to stop active deterioration and prevent safety hazards while developing long-term restoration plans.</p>
+            </div>
+            <div class="benefit-card">
+               <h3>Cost-Effective Solutions</h3>
+               <p>Early intervention prevents minor issues from becoming major problems, saving thousands in potential structural repairs.</p>
+            </div>
+         </div>
+      </section>
+
+      <section class="process-section">
+         <h2>Our Emergency Rot Repair Process</h2>
+         <div class="process-steps">
+            <div class="step">
+               <h3>Immediate Assessment</h3>
+               <p>Our emergency response team arrives promptly to evaluate the extent of rot damage, identify safety concerns, and determine immediate stabilization needs.</p>
+            </div>
+            <div class="step">
+               <h3>Rapid Stabilization</h3>
+               <p>Critical areas are immediately stabilized using temporary supports, moisture control, and emergency sealing to prevent further deterioration.</p>
+            </div>
+            <div class="step">
+               <h3>Precision Excavation</h3>
+               <p>Soft, deteriorated wood is carefully removed while preserving sound material. This stops active rot and prepares the area for permanent repair.</p>
+            </div>
+            <div class="step">
+               <h3>Epoxy Consolidation</h3>
+               <p>Advanced conservation-grade epoxy is applied to strengthen remaining sound wood and create a stable foundation for permanent repairs.</p>
+            </div>
+            <div class="step">
+               <h3>Structural Repairs</h3>
+               <p>Damaged sections are replaced using traditional joinery methods and matching materials to restore full structural integrity.</p>
+            </div>
+            <div class="step">
+               <h3>Protective Finishing</h3>
+               <p>Temporary protective finishes are applied to prevent further moisture intrusion while permanent finishing is scheduled.</p>
+            </div>
+         </div>
+      </section>
+
+      <section class="urgency-section">
+         <h2>When Every Hour Counts</h2>
+         <p>Wood rot emergencies can happen at any time, and the longer you wait, the more extensive and expensive the repairs become. Water infiltration can cause structural damage within hours, and active rot can spread rapidly in the right conditions.</p>
+
+         <div class="emergency-features">
+            <div class="feature-card">
+               <h3>Same-Day Service</h3>
+               <p>Emergency calls received before 4 PM typically result in same-day service, with 24-hour response for all emergency requests.</p>
+            </div>
+            <div class="feature-card">
+               <h3>Storm Response</h3>
+               <p>Priority service for weather-related emergencies including storm damage, ice damming, and sudden water infiltration.</p>
+            </div>
+            <div class="feature-card">
+               <h3>No Overtime Charges</h3>
+               <p>Emergency service rates include all after-hours and weekend work - no surprise charges for urgent restoration needs.</p>
+            </div>
+         </div>
+
+         <p>Call Now for Immediate Emergency Service</p>
+         <div class="phone-number">(215) 555-EMERGENCY</div>
+         <p>Available 24/7 for urgent rot repair needs</p>
+      </section>
+
+      <section class="gallery-section">
+         <h2>Emergency Rot Repair Transformation</h2>
+         <div class="gallery-container">
+            <div class="gallery-item">
+               <img src="https://placehold.co/400x200/c00/FFFFFF?text=Before+Emergency+Repair" alt="Before emergency rot repair">
+               <div class="gallery-content">
+                  <h3>Before Emergency Repair</h3>
+                  <p>Severe wood rot discovered after sudden water infiltration, with structural compromise and active deterioration.</p>
+               </div>
+            </div>
+            <div class="gallery-item">
+               <img src="https://placehold.co/400x200/800/FFFFFF?text=During+Emergency+Repair" alt="During emergency rot repair">
+               <div class="gallery-content">
+                  <h3>During Emergency Process</h3>
+                  <p>Rapid response team stabilizing the area and applying epoxy consolidation to stop active deterioration.</p>
+               </div>
+            </div>
+            <div class="gallery-item">
+               <img src="https://placehold.co/400x200/c00/FFFFFF?text=After+Emergency+Repair" alt="After emergency rot repair">
+               <div class="gallery-content">
+                  <h3>After Emergency Repair</h3>
+                  <p>Structurally sound restoration with preserved original character and protected against future deterioration.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="testimonial-section">
+         <h2>What Our Emergency Customers Say</h2>
+         <div class="testimonial-content">
+            A water main burst in my 1890s Victorian at 2 AM on a Sunday. By 8 AM, their emergency team was at my door. They not only stopped the immediate damage but saved me from having to replace an entire section of historic trim that I thought was beyond repair. The speed and quality of work was incredible - they treated my emergency like their top priority and saved me thousands in potential structural repairs. I can't recommend their emergency service highly enough!
+            <div class="customer-name">David & Susan Martinez</div>
+            <div class="customer-location">Bucks County, Pennsylvania</div>
+         </div>
+      </section>
+
+      <section class="cta-section">
+         <h2>Don't Wait - Stop Rot Damage Now</h2>
+         <p>Get immediate emergency service and a detailed plan for permanent rot repair. Our emergency response team will assess your urgent needs and provide same-day solutions to protect your investment.</p>
+         <div class="phone-number">(215) 555-EMERGENCY</div>
+         <p>Or get a detailed quote for your emergency rot repair project</p>
+         <a href="#contact" class="cta-button">Get Emergency Service & Detailed Quote</a>
+      </section>
+   </div>
+
+   <script>
+      document.querySelector('.cta-button').addEventListener('click', function(e) {
+         e.preventDefault();
+         alert('Thank you for your interest! In a real implementation, this would open an emergency contact form or initiate a call.');
+      });
+   </script>
+</body>
+
+</html>

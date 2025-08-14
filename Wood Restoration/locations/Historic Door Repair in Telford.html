@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Historic Door Repair in Telford, PA</title>
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      body {
+         font-family: 'Open Sans', sans-serif;
+         line-height: 1.6;
+         color: #333;
+         background-color: #f8f5f0;
+      }
+
+      .header {
+         background: linear-gradient(135deg, #8B4513 0%, #5D2906 100%);
+         color: white;
+         padding: 3rem 1rem;
+         text-align: center;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .header h1 {
+         font-family: 'Playfair Display', serif;
+         font-size: 2.8rem;
+         margin-bottom: 1rem;
+         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .header p {
+         font-size: 1.2rem;
+         max-width: 800px;
+         margin: 0 auto;
+         opacity: 0.9;
+      }
+
+      .container {
+         max-width: 1200px;
+         margin: 0 auto;
+         padding: 2rem;
+      }
+
+      .hero-section {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+         border-left: 5px solid #8B4513;
+         text-align: center;
+      }
+
+      .hero-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .hero-section p {
+         font-size: 1.1rem;
+         margin-bottom: 1rem;
+         line-height: 1.8;
+      }
+
+      .local-proof {
+         background: #fff8f0;
+         padding: 1.5rem;
+         border-radius: 8px;
+         margin: 1.5rem 0;
+         border: 2px dashed #8B4513;
+      }
+
+      .local-proof h3 {
+         color: #8B4513;
+         margin-bottom: 0.5rem;
+      }
+
+      .work-section {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+      }
+
+      .work-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         text-align: center;
+         margin-bottom: 2rem;
+         font-size: 2rem;
+      }
+
+      .gallery-container {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         gap: 2rem;
+         margin: 2rem 0;
+      }
+
+      .gallery-item {
+         background: #fff8f0;
+         border-radius: 10px;
+         overflow: hidden;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+         transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover {
+         transform: translateY(-5px);
+      }
+
+      .gallery-item img {
+         width: 100%;
+         height: 200px;
+         object-fit: cover;
+         border-bottom: 3px solid #8B4513;
+      }
+
+      .gallery-content {
+         padding: 1.5rem;
+      }
+
+      .gallery-content h3 {
+         color: #5D2906;
+         margin-bottom: 0.8rem;
+         font-size: 1.3rem;
+      }
+
+      .testimonial-section {
+         background: linear-gradient(135deg, #5D2906 0%, #8B4513 100%);
+         color: white;
+         padding: 3rem;
+         border-radius: 10px;
+         margin-bottom: 2rem;
+         text-align: center;
+      }
+
+      .testimonial-section h2 {
+         font-family: 'Playfair Display', serif;
+         margin-bottom: 2rem;
+         font-size: 2rem;
+      }
+
+      .testimonial-content {
+         max-width: 800px;
+         margin: 0 auto;
+         font-size: 1.2rem;
+         font-style: italic;
+         line-height: 1.8;
+      }
+
+      .testimonial-content::before,
+      .testimonial-content::after {
+         content: "" ";
+ font-size: 3rem;
+         color: rgba(255, 255, 255, 0.3);
+      }
+
+      .customer-name {
+         margin-top: 1.5rem;
+         font-weight: 600;
+         font-style: normal;
+      }
+
+      .customer-location {
+         font-size: 0.9rem;
+         opacity: 0.8;
+         font-style: normal;
+      }
+
+      .map-section {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+         text-align: center;
+      }
+
+      .map-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .map-placeholder {
+         background: #e8f4f8;
+         height: 300px;
+         border-radius: 10px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin: 1.5rem 0;
+         border: 2px dashed #8B4513;
+      }
+
+      .map-placeholder p {
+         color: #5D2906;
+         font-size: 1.2rem;
+         font-weight: 600;
+      }
+
+      .services-list {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+         gap: 1.5rem;
+         margin: 2rem 0;
+      }
+
+      .service-item {
+         background: #fff8f0;
+         padding: 1.5rem;
+         border-radius: 8px;
+         border-left: 4px solid #8B4513;
+      }
+
+      .service-item h3 {
+         color: #5D2906;
+         margin-bottom: 0.5rem;
+      }
+
+      .cta-section {
+         background: white;
+         padding: 3rem;
+         border-radius: 10px;
+         text-align: center;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         border: 2px solid #8B4513;
+      }
+
+      .cta-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .cta-button {
+         display: inline-block;
+         background: #8B4513;
+         color: white;
+         padding: 1rem 2.5rem;
+         font-size: 1.2rem;
+         text-decoration: none;
+         border-radius: 50px;
+         font-weight: 600;
+         transition: all 0.3s ease;
+         box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+         border: 2px solid #5D2906;
+      }
+
+      .cta-button:hover {
+         background: #5D2906;
+         transform: translateY(-3px);
+         box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+      }
+
+      @media (max-width: 768px) {
+         .header h1 {
+            font-size: 2.2rem;
+         }
+
+         .container {
+            padding: 1rem;
+         }
+
+         .hero-section,
+         .work-section,
+         .testimonial-section,
+         .map-section {
+            padding: 1.5rem;
+         }
+
+         .gallery-container,
+         .services-list {
+            grid-template-columns: 1fr;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <header class="header">
+      <h1>Telford's Premier Historic Door Repair Specialists</h1>
+      <p>We are the local experts for historic wood restoration in Telford. We understand the architecture and common issues in your neighborhood.</p>
+   </header>
+
+   <div class="container">
+      <section class="hero-section">
+         <h2>Proudly Serving Telford's Historic Homes Since 2008</h2>
+         <p>For over 15 years, we've been the trusted choice for restoring the beautiful Craftsman, Colonial, and Victorian doors that define Telford's distinctive architectural character. Our local expertise means we understand the specific challenges your historic doors face in our community.</p>
+
+         <div class="local-proof">
+            <h3>Local Expertise You Can Trust</h3>
+            <p>From the historic homes along Main Street to the charming Craftsman bungalows near Telford Park, we've restored over 300 doors throughout Telford, ensuring each project maintains the town's unique architectural heritage and curb appeal.</p>
+         </div>
+      </section>
+
+      <section class="work-section">
+         <h2>Our Historic Door Work in Telford, PA</h2>
+         <div class="gallery-container">
+            <div class="gallery-item">
+               <img src="https://placehold.co/400x200/8B4513/FFFFFF?text=Craftsman+Front+Door" alt="Craftsman front door restoration in Telford">
+               <div class="gallery-content">
+                  <h3>1920s Craftsman Front Door</h3>
+                  <p>Complete restoration of original oak front door with stained glass panels, including hardware repair, wood stabilization, and traditional finishing.</p>
+               </div>
+            </div>
+            <div class="gallery-item">
+               <img src="https://placehold.co/400x200/5D2906/FFFFFF?text=Victorian+Entry+Door" alt="Victorian entry door restoration in Telford">
+               <div class="gallery-content">
+                  <h3>Victorian Entry Door Restoration</h3>
+                  <p>Expert restoration of ornate Victorian entry door with detailed carving, including rot repair, epoxy consolidation, and authentic hardware reproduction.</p>
+               </div>
+            </div>
+            <div class="gallery-item">
+               <img src="https://placehold.co/400x200/8B4513/FFFFFF?text=Colonial+Screen+Door" alt="Colonial screen door restoration in Telford">
+               <div class="gallery-content">
+                  <h3>Historic Colonial Screen Door</h3>
+                  <p>Complete restoration of 1940s colonial screen door with replacement of screening, repair of wood frames, and refinishing to match home's character.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="testimonial-section">
+         <h2>What Telford Homeowners Say</h2>
+         <div class="testimonial-content">
+            The team transformed our 1925 Craftsman front door that had been neglected for decades. They not only fixed the sticking issues and replaced rotted sections but also restored the original hardware and stained glass perfectly. The craftsmanship is exceptional, and they clearly understand Telford's architectural heritage. Our door is now the stunning focal point it was meant to be, and neighbors constantly ask who did the work. Couldn't be happier!
+            <div class="customer-name">Michael & Sarah Henderson</div>
+            <div class="customer-location">Telford, PA</div>
+         </div>
+      </section>
+
+      <section class="map-section">
+         <h2>Serving Telford and the Surrounding Community</h2>
+         <div class="map-placeholder">
+            <p>Interactive Map of Telford Service Area</p>
+         </div>
+
+         <h3>Our Local Historic Door Services in Telford Include:</h3>
+         <div class="services-list">
+            <div class="service-item">
+               <h3>Front Door Restoration</h3>
+               <p>Complete restoration of historic front entry doors including hardware, glass, and wood elements with authentic finishing.</p>
+            </div>
+            <div class="service-item">
+               <h3>Screen Door Repair</h3>
+               <p>Restoration and repair of vintage screen doors to maintain airflow while preserving historical appearance.</p>
+            </div>
+            <div class="service-item">
+               <h3>Hardware Restoration</h3>
+               <p>Repair, cleaning, and reproduction of original door hardware including knobs, locks, and hinges.</p>
+            </div>
+            <div class="service-item">
+               <h3>Wood Rot Repair</h3>
+               <p>Expert repair of deteriorated door frames, thresholds, and panels using traditional joinery and epoxy consolidation.</p>
+            </div>
+            <div class="service-item">
+               <h3>Storm Door Installation</h3>
+               <p>Historically appropriate storm door installation to improve energy efficiency without compromising original door character.</p>
+            </div>
+            <div class="service-item">
+               <h3>Emergency Door Service</h3>
+               <p>24/7 emergency repair service for broken hardware, security issues, and storm damage to historic doors.</p>
+            </div>
+         </div>
+      </section>
+
+      <section class="cta-section">
+         <h2>Trust Telford's Leading Door Restoration Experts</h2>
+         <p>Schedule your free on-site assessment with our local specialists who understand Telford's historic architecture and your door's unique restoration needs.</p>
+         <a href="#contact" class="cta-button">Schedule Your Free On-Site Assessment in Telford Today!</a>
+      </section>
+   </div>
+
+   <script>
+      document.querySelector('.cta-button').addEventListener('click', function(e) {
+         e.preventDefault();
+         alert('Thank you for your interest! In a real implementation, this would open a scheduling form for Telford area assessments.');
+      });
+   </script>
+</body>
+
+</html>

@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Historic Glazing Services</title>
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      body {
+         font-family: 'Open Sans', sans-serif;
+         line-height: 1.6;
+         color: #333;
+         background-color: #f8f5f0;
+      }
+
+      .header {
+         background: linear-gradient(135deg, #8B4513 0%, #5D2906 100%);
+         color: white;
+         padding: 3rem 1rem;
+         text-align: center;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .header h1 {
+         font-family: 'Playfair Display', serif;
+         font-size: 2.8rem;
+         margin-bottom: 1rem;
+         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .header p {
+         font-size: 1.2rem;
+         max-width: 800px;
+         margin: 0 auto;
+         opacity: 0.9;
+      }
+
+      .container {
+         max-width: 1200px;
+         margin: 0 auto;
+         padding: 2rem;
+      }
+
+      .value-proposition {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+         border-left: 5px solid #8B4513;
+      }
+
+      .value-proposition h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .value-proposition p {
+         font-size: 1.1rem;
+         margin-bottom: 1rem;
+         line-height: 1.8;
+      }
+
+      .benefits-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         gap: 1.5rem;
+         margin: 2rem 0;
+      }
+
+      .benefit-card {
+         background: #fff8f0;
+         padding: 1.5rem;
+         border-radius: 8px;
+         border-left: 4px solid #8B4513;
+         transition: transform 0.3s ease;
+      }
+
+      .benefit-card:hover {
+         transform: translateY(-5px);
+      }
+
+      .benefit-card h3 {
+         color: #5D2906;
+         margin-bottom: 0.8rem;
+      }
+
+      .process-section {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+      }
+
+      .process-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         text-align: center;
+         margin-bottom: 2rem;
+         font-size: 2rem;
+      }
+
+      .process-steps {
+         counter-reset: step-counter;
+         margin: 2rem 0;
+      }
+
+      .step {
+         counter-increment: step-counter;
+         margin-bottom: 2rem;
+         padding-left: 3rem;
+         position: relative;
+         border-bottom: 1px dashed #e8e0d4;
+         padding-bottom: 1.5rem;
+      }
+
+      .step:last-child {
+         border-bottom: none;
+      }
+
+      .step::before {
+         content: counter(step-counter);
+         position: absolute;
+         left: 0;
+         top: 0;
+         background: #8B4513;
+         color: white;
+         width: 30px;
+         height: 30px;
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-weight: bold;
+      }
+
+      .step h3 {
+         color: #5D2906;
+         margin-bottom: 0.5rem;
+      }
+
+      .types-section {
+         background: linear-gradient(135deg, #5D2906 0%, #8B4513 100%);
+         color: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         margin-bottom: 2rem;
+      }
+
+      .types-section h2 {
+         font-family: 'Playfair Display', serif;
+         text-align: center;
+         margin-bottom: 2rem;
+         font-size: 2rem;
+      }
+
+      .types-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         gap: 1.5rem;
+      }
+
+      .type-card {
+         background: rgba(255, 255, 255, 0.1);
+         padding: 1.5rem;
+         border-radius: 8px;
+         border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .type-card h3 {
+         margin-bottom: 0.8rem;
+         font-size: 1.3rem;
+      }
+
+      .gallery-section {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+      }
+
+      .gallery-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         text-align: center;
+         margin-bottom: 2rem;
+         font-size: 2rem;
+      }
+
+      .gallery-container {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         gap: 2rem;
+         margin: 2rem 0;
+      }
+
+      .gallery-item {
+         background: #fff8f0;
+         border-radius: 10px;
+         overflow: hidden;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+         transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover {
+         transform: translateY(-5px);
+      }
+
+      .gallery-item img {
+         width: 100%;
+         height: 200px;
+         object-fit: cover;
+         border-bottom: 3px solid #8B4513;
+      }
+
+      .gallery-content {
+         padding: 1.5rem;
+      }
+
+      .gallery-content h3 {
+         color: #5D2906;
+         margin-bottom: 0.8rem;
+         font-size: 1.3rem;
+      }
+
+      .testimonial-section {
+         background: white;
+         padding: 3rem;
+         border-radius: 10px;
+         text-align: center;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         border: 2px solid #8B4513;
+      }
+
+      .testimonial-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         margin-bottom: 2rem;
+         font-size: 2rem;
+      }
+
+      .testimonial-content {
+         max-width: 800px;
+         margin: 0 auto;
+         font-size: 1.2rem;
+         font-style: italic;
+         line-height: 1.8;
+         color: #5D2906;
+      }
+
+      .testimonial-content::before,
+      .testimonial-content::after {
+         content: "" ";
+ font-size: 3rem;
+         color: #8B4513;
+         opacity: 0.3;
+      }
+
+      .customer-name {
+         margin-top: 1.5rem;
+         font-weight: 600;
+         font-style: normal;
+         color: #333;
+      }
+
+      .customer-location {
+         font-size: 0.9rem;
+         opacity: 0.8;
+         font-style: normal;
+         color: #666;
+      }
+
+      .cta-section {
+         background: linear-gradient(135deg, #8B4513 0%, #5D2906 100%);
+         color: white;
+         padding: 3rem;
+         border-radius: 10px;
+         text-align: center;
+         margin-top: 2rem;
+      }
+
+      .cta-section h2 {
+         font-family: 'Playfair Display', serif;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .cta-button {
+         display: inline-block;
+         background: white;
+         color: #5D2906;
+         padding: 1rem 2.5rem;
+         font-size: 1.2rem;
+         text-decoration: none;
+         border-radius: 50px;
+         font-weight: 600;
+         transition: all 0.3s ease;
+         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+         border: 2px solid white;
+      }
+
+      .cta-button:hover {
+         background: transparent;
+         color: white;
+         transform: translateY(-3px);
+         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      @media (max-width: 768px) {
+         .header h1 {
+            font-size: 2.2rem;
+         }
+
+         .container {
+            padding: 1rem;
+         }
+
+         .value-proposition,
+         .process-section,
+         .types-section,
+         .gallery-section {
+            padding: 1.5rem;
+         }
+
+         .benefits-grid,
+         .types-grid,
+         .gallery-container {
+            grid-template-columns: 1fr;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <header class="header">
+      <h1>Expert Historic Glazing Services</h1>
+      <p>Our specialized, proven process delivers superior results, saves you money, and protects your home's value.</p>
+   </header>
+
+   <div class="container">
+      <section class="value-proposition">
+         <h2>Preserving the Heart of Historic Windows</h2>
+         <p>Historic glazing is a specialized craft that requires deep understanding of period materials, techniques, and aesthetics. Unlike modern window installations, historic glazing involves working with original glass, traditional putties, and authentic profiles that define your home's architectural character. Proper glazing not only ensures weatherproofing and energy efficiency but also maintains the visual authenticity that makes historic homes irreplaceable.</p>
+         <p>Our expert glaziers combine traditional craftsmanship with modern knowledge to deliver results that exceed both historical standards and contemporary performance expectations. Whether you're restoring original glass or upgrading with historically appropriate replacements, our glazing services preserve your investment while solving functional issues.</p>
+
+         <div class="benefits-grid">
+            <div class="benefit-card">
+               <h3>Authentic Historical Appearance</h3>
+               <p>Maintain proper sight lines, profiles, and period-appropriate materials that preserve your home's architectural integrity and historical significance.</p>
+            </div>
+            <div class="benefit-card">
+               <h3>Superior Weather Protection</h3>
+               <p>Professional glazing with appropriate materials provides excellent air and water sealing while allowing for natural wood movement and expansion.</p>
+            </div>
+            <div class="benefit-card">
+               <h3>Enhanced Energy Efficiency</h3>
+               <p>Proper glazing techniques with historically appropriate materials can achieve energy performance comparable to modern alternatives.</p>
+            </div>
+         </div>
+      </section>
+
+      <section class="process-section">
+         <h2>Our Historic Glazing Process</h2>
+         <div class="process-steps">
+            <div class="step">
+               <h3>Historical Assessment</h3>
+               <p>We begin by evaluating your windows' historical period, original glazing methods, and existing conditions. This includes identifying appropriate materials, profiles, and techniques that match your home's architectural style and era.</p>
+            </div>
+            <div class="step">
+               <h3>Glass Selection & Preparation</h3>
+               <p>Original glass is preserved where possible, or historically appropriate replacements are sourced. Glass is carefully measured, cut, and prepared to fit traditional glazing rabbets and profiles.</p>
+            </div>
+            <div class="step">
+               <h3>Putty Preparation</h3>
+               <p>Traditional linseed oil-based glazing compounds are prepared and worked to proper consistency. Modern alternatives are used only when historically appropriate and structurally necessary.</p>
+            </div>
+            <div class="step">
+               <h3>Careful Installation</h3>
+               <p>Glass is installed using traditional techniques, including proper bedding, glazing points, and compound application. Attention is paid to sight lines, profiles, and period-appropriate details.</p>
+            </div>
+            <div class="step">
+               <h3>Tooling & Finishing</h3>
+               <p>Glazing compound is precisely tooled using traditional methods to create authentic profiles and proper sealing. Final finishing ensures smooth, professional appearance.</p>
+            </div>
+            <div class="step">
+               <h3>Curing & Painting</h3>
+               <p>Proper curing time is allowed for oil-based compounds, followed by appropriate priming and painting with historically compatible finishes that provide long-term protection.</p>
+            </div>
+         </div>
+      </section>
+
+      <section class="types-section">
+         <h2>Historic Glazing Types We Specialize In</h2>
+         <div class="types-grid">
+            <div class="type-card">
+               <h3>Traditional Linseed Oil Glazing</h3>
+               <p>Authentic period-appropriate glazing using traditional linseed oil compounds that provide excellent longevity and historical accuracy for pre-1950s windows.</p>
+            </div>
+            <div class="type-card">
+               <h3>Restoration of Original Glass</h3>
+               <p>Preservation and reinstallation of original wavy, cylinder, or crown glass that provides authentic character and maintains historical integrity.</p>
+            </div>
+            <div class="type-card">
+               <h3>Historically Appropriate Replacement</h3>
+               <p>Sourcing and installing glass that matches period characteristics including texture, color, and thickness while meeting modern safety standards.</p>
+            </div>
+            <div class="type-card">
+               <h3>Leadlight and Decorative Glazing</h3>
+               <p>Specialized restoration of leaded glass panels, stained glass, and decorative elements that require expert knowledge and careful handling.</p>
+            </div>
+         </div>
+      </section>
+
+      <section class="gallery-section">
+         <h2>Historic Glazing Transformation</h2>
+         <div class="gallery-container">
+            <div class="gallery-item">
+               <img src="https://placehold.co/400x200/8B4513/FFFFFF?text=Before+Historic+Glazing" alt="Before historic glazing">
+               <div class="gallery-content">
+                  <h3>Before Restoration</h3>
+                  <p>Foggy, cracked glass with failed putty and water infiltration that compromised both appearance and weather protection.</p>
+               </div>
+            </div>
+            <div class="gallery-item">
+               <img src="https://placehold.co/400x200/5D2906/FFFFFF?text=During+Glazing+Process" alt="During historic glazing">
+               <div class="gallery-content">
+                  <h3>During Process</h3>
+                  <p>Expert craftsmanship in action: traditional putty application and precise tooling to create authentic period profiles.</p>
+               </div>
+            </div>
+            <div class="gallery-item">
+               <img src="https://placehold.co/400x200/8B4513/FFFFFF?text=After+Historic+Glazing" alt="After historic glazing">
+               <div class="gallery-content">
+                  <h3>After Restoration</h3>
+                  <p>Beautifully glazed windows with authentic profiles, clear glass, and historically appropriate finishes that preserve character.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="testimonial-section">
+         <h2>What Our Customers Say</h2>
+         <div class="testimonial-content">
+            The glazing work on our 1910 Craftsman windows was absolutely exceptional. They preserved our original wavy glass - something I thought was impossible - and the new glazing looks like it was done 100 years ago. The attention to detail in matching the original putty profiles and tooling was remarkable. Our windows now have that authentic period look while providing excellent weather protection. Worth every penny for the craftsmanship and historical accuracy!
+            <div class="customer-name">Elizabeth & Thomas Morrison</div>
+            <div class="customer-location">Newtown, Bucks County</div>
+         </div>
+      </section>
+
+      <section class="cta-section">
+         <h2>Restore Your Windows' Authentic Beauty</h2>
+         <p>Get a detailed, no-obligation quote for your historic glazing project. Our expert glaziers will assess your specific needs and provide a customized solution that preserves your home's character while ensuring superior performance.</p>
+         <a href="#contact" class="cta-button">Get a Detailed Quote for Your Historic Glazing Project</a>
+      </section>
+   </div>
+
+   <script>
+      document.querySelector('.cta-button').addEventListener('click', function(e) {
+         e.preventDefault();
+         alert('Thank you for your interest! In a real implementation, this would open a contact form for a detailed quote.');
+      });
+   </script>
+</body>
+
+</html>

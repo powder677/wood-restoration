@@ -1,0 +1,476 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Weatherization for Historic Windows</title>
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      body {
+         font-family: 'Open Sans', sans-serif;
+         line-height: 1.6;
+         color: #333;
+         background-color: #f8f5f0;
+      }
+
+      .header {
+         background: linear-gradient(135deg, #8B4513 0%, #5D2906 100%);
+         color: white;
+         padding: 3rem 1rem;
+         text-align: center;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .header h1 {
+         font-family: 'Playfair Display', serif;
+         font-size: 2.8rem;
+         margin-bottom: 1rem;
+         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .header p {
+         font-size: 1.2rem;
+         max-width: 800px;
+         margin: 0 auto;
+         opacity: 0.9;
+      }
+
+      .container {
+         max-width: 1200px;
+         margin: 0 auto;
+         padding: 2rem;
+      }
+
+      .value-proposition {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+         border-left: 5px solid #8B4513;
+      }
+
+      .value-proposition h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .value-proposition p {
+         font-size: 1.1rem;
+         margin-bottom: 1rem;
+         line-height: 1.8;
+      }
+
+      .benefits-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         gap: 1.5rem;
+         margin: 2rem 0;
+      }
+
+      .benefit-card {
+         background: #fff8f0;
+         padding: 1.5rem;
+         border-radius: 8px;
+         border-left: 4px solid #8B4513;
+         transition: transform 0.3s ease;
+      }
+
+      .benefit-card:hover {
+         transform: translateY(-5px);
+      }
+
+      .benefit-card h3 {
+         color: #5D2906;
+         margin-bottom: 0.8rem;
+      }
+
+      .process-section {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+      }
+
+      .process-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         text-align: center;
+         margin-bottom: 2rem;
+         font-size: 2rem;
+      }
+
+      .process-steps {
+         counter-reset: step-counter;
+         margin: 2rem 0;
+      }
+
+      .step {
+         counter-increment: step-counter;
+         margin-bottom: 2rem;
+         padding-left: 3rem;
+         position: relative;
+         border-bottom: 1px dashed #e8e0d4;
+         padding-bottom: 1.5rem;
+      }
+
+      .step:last-child {
+         border-bottom: none;
+      }
+
+      .step::before {
+         content: counter(step-counter);
+         position: absolute;
+         left: 0;
+         top: 0;
+         background: #8B4513;
+         color: white;
+         width: 30px;
+         height: 30px;
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-weight: bold;
+      }
+
+      .step h3 {
+         color: #5D2906;
+         margin-bottom: 0.5rem;
+      }
+
+      .solutions-section {
+         background: linear-gradient(135deg, #5D2906 0%, #8B4513 100%);
+         color: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         margin-bottom: 2rem;
+      }
+
+      .solutions-section h2 {
+         font-family: 'Playfair Display', serif;
+         text-align: center;
+         margin-bottom: 2rem;
+         font-size: 2rem;
+      }
+
+      .solutions-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         gap: 1.5rem;
+      }
+
+      .solution-card {
+         background: rgba(255, 255, 255, 0.1);
+         padding: 1.5rem;
+         border-radius: 8px;
+         border: 1px solid rgba(255, 255, 255, 0.2);
+      }
+
+      .solution-card h3 {
+         margin-bottom: 0.8rem;
+         font-size: 1.3rem;
+      }
+
+      .gallery-section {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+      }
+
+      .gallery-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         text-align: center;
+         margin-bottom: 2rem;
+         font-size: 2rem;
+      }
+
+      .gallery-container {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         gap: 2rem;
+         margin: 2rem 0;
+      }
+
+      .gallery-item {
+         background: #fff8f0;
+         border-radius: 10px;
+         overflow: hidden;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+         transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover {
+         transform: translateY(-5px);
+      }
+
+      .gallery-item img {
+         width: 100%;
+         height: 200px;
+         object-fit: cover;
+         border-bottom: 3px solid #8B4513;
+      }
+
+      .gallery-content {
+         padding: 1.5rem;
+      }
+
+      .gallery-content h3 {
+         color: #5D2906;
+         margin-bottom: 0.8rem;
+         font-size: 1.3rem;
+      }
+
+      .testimonial-section {
+         background: white;
+         padding: 3rem;
+         border-radius: 10px;
+         text-align: center;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         border: 2px solid #8B4513;
+      }
+
+      .testimonial-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         margin-bottom: 2rem;
+         font-size: 2rem;
+      }
+
+      .testimonial-content {
+         max-width: 800px;
+         margin: 0 auto;
+         font-size: 1.2rem;
+         font-style: italic;
+         line-height: 1.8;
+         color: #5D2906;
+      }
+
+      .testimonial-content::before,
+      .testimonial-content::after {
+         content: "" ";
+ font-size: 3rem;
+         color: #8B4513;
+         opacity: 0.3;
+      }
+
+      .customer-name {
+         margin-top: 1.5rem;
+         font-weight: 600;
+         font-style: normal;
+         color: #333;
+      }
+
+      .customer-location {
+         font-size: 0.9rem;
+         opacity: 0.8;
+         font-style: normal;
+         color: #666;
+      }
+
+      .cta-section {
+         background: linear-gradient(135deg, #8B4513 0%, #5D2906 100%);
+         color: white;
+         padding: 3rem;
+         border-radius: 10px;
+         text-align: center;
+         margin-top: 2rem;
+      }
+
+      .cta-section h2 {
+         font-family: 'Playfair Display', serif;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .cta-button {
+         display: inline-block;
+         background: white;
+         color: #5D2906;
+         padding: 1rem 2.5rem;
+         font-size: 1.2rem;
+         text-decoration: none;
+         border-radius: 50px;
+         font-weight: 600;
+         transition: all 0.3s ease;
+         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+         border: 2px solid white;
+      }
+
+      .cta-button:hover {
+         background: transparent;
+         color: white;
+         transform: translateY(-3px);
+         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      @media (max-width: 768px) {
+         .header h1 {
+            font-size: 2.2rem;
+         }
+
+         .container {
+            padding: 1rem;
+         }
+
+         .value-proposition,
+         .process-section,
+         .solutions-section,
+         .gallery-section {
+            padding: 1.5rem;
+         }
+
+         .benefits-grid,
+         .solutions-grid,
+         .gallery-container {
+            grid-template-columns: 1fr;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <header class="header">
+      <h1>Expert Weatherization for Historic Windows</h1>
+      <p>Our specialized, proven process delivers superior results, saves you money, and protects your home's value.</p>
+   </header>
+
+   <div class="container">
+      <section class="value-proposition">
+         <h2>Balancing Comfort and Character</h2>
+         <p>Weatherization for historic windows requires a delicate balance between improving energy efficiency and preserving architectural authenticity. Unlike modern windows that rely on sealed units and rigid construction, historic windows were designed to work with natural materials and seasonal movement. Our weatherization services address air infiltration, thermal performance, and moisture management while maintaining the operational characteristics and visual appeal that make your windows historically significant.</p>
+         <p>Proper weatherization can reduce energy costs by up to 25% while eliminating drafts, condensation, and noise infiltration. Our approach ensures your historic windows perform like new while retaining their original charm and character.</p>
+
+         <div class="benefits-grid">
+            <div class="benefit-card">
+               <h3>Dramatic Energy Savings</h3>
+               <p>Professional weatherization can reduce heating and cooling costs by 20-30% while maintaining your home's historic appearance and character.</p>
+            </div>
+            <div class="benefit-card">
+               <h3>Improved Comfort</h3>
+               <p>Eliminate drafts, cold spots, and temperature fluctuations that make living spaces uncomfortable throughout the year.</p>
+            </div>
+            <div class="benefit-card">
+               <h3>Preserved Architectural Integrity</h3>
+               <p>Historically appropriate weatherization solutions maintain your windows' original operation, appearance, and historical significance.</p>
+            </div>
+         </div>
+      </section>
+
+      <section class="process-section">
+         <h2>Our Historic Window Weatherization Process</h2>
+         <div class="process-steps">
+            <div class="step">
+               <h3>Comprehensive Energy Audit</h3>
+               <p>We begin with a detailed assessment using thermal imaging and air leakage testing to identify specific areas of energy loss and draft infiltration in your historic windows.</p>
+            </div>
+            <div class="step">
+               <h3>Operational Analysis</h3>
+               <p>Each window is evaluated for proper operation, sash fit, and hardware functionality. Issues affecting weatherization performance are identified and addressed.</p>
+            </div>
+            <div class="step">
+               <h3>Custom Weatherstripping Installation</h3>
+               <p>Historically appropriate weatherstripping materials are carefully selected and installed to provide maximum air sealing while maintaining proper window operation.</p>
+            </div>
+            <div class="step">
+               <h3>Seal and Caulk Assessment</h3>
+               <p>Exterior and interior sealing points are evaluated and renewed with compatible materials that allow for natural wood movement and expansion.</p>
+            </div>
+            <div class="step">
+               <h3>Storm Window Integration</h3>
+               <p>Where appropriate, custom storm windows are designed and installed to provide additional thermal protection while maintaining historical appearance.</p>
+            </div>
+            <div class="step">
+               <h3>Final Performance Testing</h3>
+               <p>Air leakage and thermal performance are retested to ensure optimal results, with adjustments made as needed for maximum effectiveness.</p>
+            </div>
+         </div>
+      </section>
+
+      <section class="solutions-section">
+         <h2>Historic Weatherization Solutions</h2>
+         <div class="solutions-grid">
+            <div class="solution-card">
+               <h3>V-Seal Bronze Weatherstripping</h3>
+               <p>Authentic reproduction of original bronze weatherstripping used in high-end historic windows, providing excellent sealing while maintaining proper operation.</p>
+            </div>
+            <div class="solution-card">
+               <h3>Felt and Compression Seals</h3>
+               <p>Traditional felt weatherstripping and modern compression seals that are virtually invisible while providing superior air sealing performance.</p>
+            </div>
+            <div class="solution-card">
+               <h3>Custom Storm Windows</h3>
+               <p>Historically appropriate storm windows that can be installed on the interior or exterior to provide additional thermal protection without altering original windows.</p>
+            </div>
+            <div class="solution-card">
+               <h3>Thermal Curtains & Panels</h3>
+               <p>Specialized window treatments that provide additional insulation while complementing historic interior design and maintaining architectural authenticity.</p>
+            </div>
+         </div>
+      </section>
+
+      <section class="gallery-section">
+         <h2>Weatherization Transformation</h2>
+         <div class="gallery-container">
+            <div class="gallery-item">
+               <img src="https://placehold.co/400x200/8B4513/FFFFFF?text=Before+Weatherization" alt="Before weatherization">
+               <div class="gallery-content">
+                  <h3>Before Weatherization</h3>
+                  <p>Noticeable drafts, cold spots, and energy loss due to inadequate sealing and weatherstripping around historic window frames.</p>
+               </div>
+            </div>
+            <div class="gallery-item">
+               <img src="https://placehold.co/400x200/5D2906/FFFFFF?text=During+Weatherization" alt="During weatherization">
+               <div class="gallery-content">
+                  <h3>During Process</h3>
+                  <p>Installation of historically appropriate weatherstripping and sealing materials that provide superior performance while maintaining appearance.</p>
+               </div>
+            </div>
+            <div class="gallery-item">
+               <img src="https://placehold.co/400x200/8B4513/FFFFFF?text=After+Weatherization" alt="After weatherization">
+               <div class="gallery-content">
+                  <h3>After Weatherization</h3>
+                  <p>Windows that operate smoothly with eliminated drafts, improved energy efficiency, and preserved historical character and appearance.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="testimonial-section">
+         <h2>What Our Customers Say</h2>
+         <div class="testimonial-content">
+            Before the weatherization work, our heating bills were outrageous and we had terrible drafts throughout the house. I was worried that fixing the windows would ruin their historic charm. The team exceeded our expectations - they found the perfect balance between energy efficiency and preserving the authentic look of our 1920s colonial windows. Our energy bills dropped 28% last winter, and the house is so much more comfortable. You can't even tell they did anything, which is exactly what we wanted!
+            <div class="customer-name">Margaret & Richard Sullivan</div>
+            <div class="customer-location">Bucks County, Pennsylvania</div>
+         </div>
+      </section>
+
+      <section class="cta-section">
+         <h2>Make Your Windows Energy Efficient Today</h2>
+         <p>Get a detailed, no-obligation quote for your historic window weatherization project. Our energy efficiency experts will assess your specific needs and provide a customized solution that preserves your home's character while maximizing comfort and savings.</p>
+         <a href="#contact" class="cta-button">Get a Detailed Quote for Your Weatherization Project</a>
+      </section>
+   </div>
+
+   <script>
+      document.querySelector('.cta-button').addEventListener('click', function(e) {
+         e.preventDefault();
+         alert('Thank you for your interest! In a real implementation, this would open a contact form for a detailed quote.');
+      });
+   </script>
+</body>
+
+</html>

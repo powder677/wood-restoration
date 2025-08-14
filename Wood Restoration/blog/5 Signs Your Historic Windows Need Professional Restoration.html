@@ -1,0 +1,412 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>5 Signs Your Historic Windows Need Professional Restoration</title>
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      body {
+         font-family: 'Open Sans', sans-serif;
+         line-height: 1.6;
+         color: #333;
+         background-color: #f8f5f0;
+      }
+
+      .header {
+         background: linear-gradient(135deg, #8B4513 0%, #5D2906 100%);
+         color: white;
+         padding: 3rem 1rem;
+         text-align: center;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .header h1 {
+         font-family: 'Playfair Display', serif;
+         font-size: 2.8rem;
+         margin-bottom: 1rem;
+         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .header p {
+         font-size: 1.2rem;
+         max-width: 800px;
+         margin: 0 auto;
+         opacity: 0.9;
+      }
+
+      .container {
+         max-width: 1200px;
+         margin: 0 auto;
+         padding: 2rem;
+      }
+
+      .intro {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+         border-left: 5px solid #8B4513;
+      }
+
+      .intro h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .intro p {
+         font-size: 1.1rem;
+         margin-bottom: 1rem;
+         line-height: 1.8;
+      }
+
+      .signs-section {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+      }
+
+      .signs-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         text-align: center;
+         margin-bottom: 2rem;
+         font-size: 2rem;
+      }
+
+      .signs-list {
+         counter-reset: sign-counter;
+         margin: 2rem 0;
+      }
+
+      .sign-item {
+         counter-increment: sign-counter;
+         margin-bottom: 2.5rem;
+         padding: 2rem;
+         background: #fff8f0;
+         border-radius: 10px;
+         border-left: 5px solid #8B4513;
+         box-shadow: 0 3px 10px rgba(0, 0, 0, 0.05);
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .sign-item:hover {
+         transform: translateY(-5px);
+         box-shadow: 0 8px 20px rgba(139, 69, 19, 0.15);
+      }
+
+      .sign-item::before {
+         content: counter(sign-counter);
+         position: absolute;
+         left: -25px;
+         top: 20px;
+         background: #8B4513;
+         color: white;
+         width: 40px;
+         height: 40px;
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-weight: bold;
+         font-size: 1.2rem;
+         box-shadow: 0 2px 5px rgba(0, 0, 0, 0.2);
+      }
+
+      .sign-item h3 {
+         color: #5D2906;
+         margin-bottom: 1rem;
+         font-size: 1.5rem;
+         position: relative;
+         padding-left: 40px;
+      }
+
+      .sign-item h3::before {
+         content: "⚠";
+         position: absolute;
+         left: 0;
+         top: 0;
+         color: #8B4513;
+         font-size: 1.8rem;
+      }
+
+      .sign-item p {
+         margin-bottom: 1rem;
+         line-height: 1.7;
+      }
+
+      .sign-item .solution {
+         background: #e8f4f8;
+         padding: 1rem;
+         border-radius: 8px;
+         border-left: 3px solid #5D2906;
+         margin-top: 1rem;
+      }
+
+      .sign-item .solution h4 {
+         color: #5D2906;
+         margin-bottom: 0.5rem;
+      }
+
+      .expertise-section {
+         background: linear-gradient(135deg, #5D2906 0%, #8B4513 100%);
+         color: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         margin-bottom: 2rem;
+      }
+
+      .expertise-section h2 {
+         font-family: 'Playfair Display', serif;
+         text-align: center;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .expertise-section p {
+         text-align: center;
+         font-size: 1.1rem;
+         max-width: 800px;
+         margin: 0 auto;
+         line-height: 1.8;
+      }
+
+      .what-to-do {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+      }
+
+      .what-to-do h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         text-align: center;
+         margin-bottom: 2rem;
+         font-size: 2rem;
+      }
+
+      .steps {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         gap: 2rem;
+         margin: 2rem 0;
+      }
+
+      .step-card {
+         background: #f0f8ff;
+         padding: 1.5rem;
+         border-radius: 8px;
+         text-align: center;
+         border-top: 4px solid #8B4513;
+      }
+
+      .step-card h3 {
+         color: #5D2906;
+         margin-bottom: 1rem;
+         font-size: 1.3rem;
+      }
+
+      .cta-section {
+         background: white;
+         padding: 3rem;
+         border-radius: 10px;
+         text-align: center;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         border: 2px solid #8B4513;
+      }
+
+      .cta-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .cta-button {
+         display: inline-block;
+         background: #8B4513;
+         color: white;
+         padding: 1rem 2.5rem;
+         font-size: 1.2rem;
+         text-decoration: none;
+         border-radius: 50px;
+         font-weight: 600;
+         transition: all 0.3s ease;
+         box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+         border: 2px solid #5D2906;
+      }
+
+      .cta-button:hover {
+         background: #5D2906;
+         transform: translateY(-3px);
+         box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+      }
+
+      .key-message {
+         text-align: center;
+         font-size: 1.4rem;
+         font-weight: 600;
+         color: #8B4513;
+         margin: 2rem 0;
+         font-style: italic;
+         padding: 1.5rem;
+         background: #fff8f0;
+         border-radius: 8px;
+         border: 1px dashed #8B4513;
+      }
+
+      @media (max-width: 768px) {
+         .header h1 {
+            font-size: 2.2rem;
+         }
+
+         .container {
+            padding: 1rem;
+         }
+
+         .intro,
+         .signs-section,
+         .expertise-section,
+         .what-to-do {
+            padding: 1.5rem;
+         }
+
+         .sign-item {
+            padding: 1.5rem;
+         }
+
+         .sign-item::before {
+            position: relative;
+            left: 0;
+            top: 0;
+            margin-bottom: 1rem;
+         }
+
+         .steps {
+            grid-template-columns: 1fr;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <header class="header">
+      <h1>5 Signs Your Historic Windows Need Professional Restoration</h1>
+      <p>We understand the unique problems of historic homes, and we have the expertise to solve them. Restoration is smarter than replacement.</p>
+   </header>
+
+   <div class="container">
+      <section class="intro">
+         <h2>Don't Let Window Problems Compromise Your Home's Value</h2>
+         <p>If you own a historic home in Bucks County, you know that your original windows are more than just functional elements—they're architectural treasures that define your property's character. However, as these windows age, they can develop problems that affect both their appearance and performance.</p>
+         <p>Many homeowners make the costly mistake of assuming that window issues mean replacement is necessary. The truth is, most historic window problems can be effectively solved through professional restoration, preserving both the beauty and value of your home while addressing functional concerns.</p>
+      </section>
+
+      <div class="key-message">
+         "We understand the unique problems of historic homes, and we have the expertise to solve them. Restoration is smarter than replacement."
+      </div>
+
+      <section class="signs-section">
+         <h2>Warning Signs That Require Professional Attention</h2>
+         <div class="signs-list">
+            <div class="sign-item">
+               <h3>Sticking or Jammed Windows</h3>
+               <p>When your windows no longer open or close smoothly, it's often due to seasonal wood movement, paint buildup, or worn hardware rather than structural failure. Forcing operation can cause permanent damage to the window frame and sash.</p>
+               <div class="solution">
+                  <h4>Professional Solution:</h4>
+                  <p>Expert restoration includes careful adjustment of sash weights, replacement of worn hardware, and precise planing of swollen wood to restore smooth operation without compromising structural integrity.</p>
+               </div>
+            </div>
+            <div class="sign-item">
+               <h3>Visible Drafts and Energy Loss</h3>
+               <p>Feeling cold air around your windows doesn't necessarily mean they're beyond repair. Drafts are typically caused by missing or deteriorated weatherstripping, gaps in the sash fit, or failed paint seals that can be addressed through restoration.</p>
+               <div class="solution">
+                  <h4>Professional Solution:</h4>
+                  <p>Proper restoration includes installing historically appropriate weatherstripping, adjusting sash fit, and sealing gaps while maintaining the window's original operation and appearance for improved energy efficiency.</p>
+               </div>
+            </div>
+            <div class="sign-item">
+               <h3>Peeling Paint and Finish Failure</h3>
+               <p>Multiple layers of incompatible paint, trapped moisture, or poor surface preparation often lead to peeling, blistering, or alligatoring paint. This not only looks unsightly but also exposes wood to moisture damage.</p>
+               <div class="solution">
+                  <h4>Professional Solution:</h4>
+                  <p>Professional paint system restoration involves careful stripping, wood preparation, and application of compatible primer and finish coats using techniques that preserve historic profiles and details.</p>
+               </div>
+            </div>
+            <div class="sign-item">
+               <h3>Soft or Crumbling Wood</h3>
+               <p>Localized wood rot or soft spots in window frames and sills are often repairable through selective replacement of damaged sections. Complete window replacement is rarely necessary for isolated wood deterioration.</p>
+               <div class="solution">
+                  <h4>Professional Solution:</h4>
+                  <p>Expert restoration uses traditional joinery techniques to replace only damaged wood sections with matching materials, preserving original profiles and maintaining historical authenticity.</p>
+               </div>
+            </div>
+            <div class="sign-item">
+               <h3>Broken Hardware or Missing Parts</h3>
+               <p>Worn latches, broken locks, or missing hardware components don't mean your windows are obsolete. Many original hardware pieces can be restored, and missing parts can be authentically reproduced.</p>
+               <div class="solution">
+                  <h4>Professional Solution:</h4>
+                  <p>Specialized restoration includes hardware repair, reproduction of missing period-appropriate components, and installation of compatible modern upgrades that maintain historical appearance.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="expertise-section">
+         <h2>Why Professional Historic Window Restoration Matters</h2>
+         <p>Historic windows require specialized knowledge and techniques that general contractors and modern window installers simply don't possess. Our team understands the unique materials, construction methods, and preservation requirements that make your windows irreplaceable architectural elements.</p>
+         <p>Proper restoration preserves not only the functionality of your windows but also maintains the historical integrity and value of your Bucks County property. Unlike replacement, which destroys original features, restoration enhances your home's character while solving practical problems.</p>
+      </section>
+
+      <section class="what-to-do">
+         <h2>What to Do When You Notice These Signs</h2>
+         <div class="steps">
+            <div class="step-card">
+               <h3>Document the Issues</h3>
+               <p>Take photos and notes about specific problems you're experiencing. This helps professionals understand the scope of work needed and develop appropriate solutions.</p>
+            </div>
+            <div class="step-card">
+               <h3>Avoid DIY Repairs</h3>
+               <p>Inappropriate repairs or forcing operation can cause permanent damage to historic windows. Stop using problematic windows until they can be properly assessed.</p>
+            </div>
+            <div class="step-card">
+               <h3>Schedule Professional Assessment</h3>
+               <p>Contact experienced historic window restoration specialists who can properly diagnose issues and recommend appropriate treatment options.</p>
+            </div>
+            <div class="step-card">
+               <h3>Learn About Your Options</h3>
+               <p>Understand the difference between restoration and replacement, and why restoration typically provides better long-term value for historic properties.</p>
+            </div>
+         </div>
+      </section>
+
+      <section class="cta-section">
+         <h2>Protect Your Historic Investment</h2>
+         <p>Don't let common window problems diminish the beauty and value of your Bucks County historic home. Our restoration experts can diagnose issues, recommend appropriate solutions, and restore your windows to their original functionality and appearance.</p>
+         <a href="#contact" class="cta-button">Contact Us for a FREE, No-Obligation Assessment</a>
+      </section>
+   </div>
+
+   <script>
+      document.querySelector('.cta-button').addEventListener('click', function(e) {
+         e.preventDefault();
+         alert('Thank you for your interest! In a real implementation, this would scroll to a contact form or open a modal with contact information.');
+      });
+   </script>
+</body>
+
+</html>
