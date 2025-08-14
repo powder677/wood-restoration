@@ -170,47 +170,41 @@
          margin-bottom: 10px;
          font-size: 1.2em;
       }
-
+      
       /* Services Section */
       .services {
-         padding: 80px 0;
-         background: #fff;
+        padding: 80px 0;
+        background: #fff;
       }
-
       .services-grid {
-         display: grid;
-         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-         gap: 30px;
-         margin-top: 50px;
+        display: grid;
+        grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+        gap: 30px;
+        margin-top: 50px;
       }
-
       .service-card {
-         background: #f8f9fa;
-         border-radius: 15px;
-         padding: 30px;
-         text-align: center;
-         box-shadow: 0 5px 20px rgba(0, 0, 0, 0.05);
-         transition: transform 0.3s, box-shadow 0.3s;
+        background: #f8f9fa;
+        border-radius: 15px;
+        padding: 30px;
+        text-align: center;
+        box-shadow: 0 5px 20px rgba(0,0,0,0.05);
+        transition: transform 0.3s, box-shadow 0.3s;
       }
-
       .service-card:hover {
-         transform: translateY(-5px);
-         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.1);
+        transform: translateY(-5px);
+        box-shadow: 0 10px 25px rgba(0,0,0,0.1);
       }
-
       .service-card h3 {
-         color: #8b4513;
-         margin-bottom: 15px;
+        color: #8b4513;
+        margin-bottom: 15px;
       }
-
       .service-card p {
-         margin-bottom: 20px;
+        margin-bottom: 20px;
       }
-
       .service-card a {
-         color: #ff6b35;
-         text-decoration: none;
-         font-weight: bold;
+        color: #ff6b35;
+        text-decoration: none;
+        font-weight: bold;
       }
 
 
@@ -259,14 +253,12 @@
          padding: 80px 0;
          background: white;
       }
-
       .case-studies-grid {
          display: grid;
          grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
          gap: 30px;
          margin-top: 50px;
       }
-
       .case-study-card {
          background: #f8f9fa;
          border-radius: 15px;
@@ -276,30 +268,25 @@
          display: flex;
          flex-direction: column;
       }
-
       .case-study-card:hover {
          transform: translateY(-5px);
-         box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+         box-shadow: 0 10px 25px rgba(0,0,0,0.15);
       }
-
       .case-study-content {
          padding: 30px;
          flex-grow: 1;
          display: flex;
          flex-direction: column;
       }
-
       .case-study-content h3 {
          color: #8b4513;
          margin-bottom: 15px;
          font-size: 1.4em;
       }
-
-      .case-study-content p {
+       .case-study-content p {
          margin-bottom: 20px;
          flex-grow: 1;
       }
-
       .case-study-content a {
          text-decoration: none;
          color: #ff6b35;
@@ -307,7 +294,6 @@
          transition: color 0.3s;
          align-self: flex-start;
       }
-
       .case-study-content a:hover {
          color: #2c3e50;
       }
@@ -349,38 +335,22 @@
          font-weight: bold;
          color: #8b4513;
       }
-
+      
       /* BLOG & GUIDES SECTION STYLE */
-      .blog,
-      .guides,
-      .locations {
+      .blog, .guides, .locations {
          padding: 80px 0;
       }
+      .blog { background: #fff; }
+      .guides { background: #f8f9fa; }
+      .locations { background: #fff; }
 
-      .blog {
-         background: #fff;
-      }
-
-      .guides {
-         background: #f8f9fa;
-      }
-
-      .locations {
-         background: #fff;
-      }
-
-      .blog-grid,
-      .guides-grid,
-      .locations-grid {
+      .blog-grid, .guides-grid, .locations-grid {
          display: grid;
          grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
          gap: 30px;
          margin-top: 50px;
       }
-
-      .blog-card,
-      .guide-card,
-      .location-card {
+      .blog-card, .guide-card, .location-card {
          background: #f8f9fa;
          border-radius: 15px;
          overflow: hidden;
@@ -389,50 +359,32 @@
          display: flex;
          flex-direction: column;
       }
-
-      .blog-card:hover,
-      .guide-card:hover,
-      .location-card:hover {
+      .blog-card:hover, .guide-card:hover, .location-card:hover {
          transform: translateY(-5px);
       }
-
-      .blog-card-content,
-      .guide-card-content,
-      .location-card-content {
+      .blog-card-content, .guide-card-content, .location-card-content {
          padding: 25px;
          display: flex;
          flex-direction: column;
          flex-grow: 1;
       }
-
-      .blog-card h3,
-      .guide-card h3,
-      .location-card h3 {
+      .blog-card h3, .guide-card h3, .location-card h3 {
          color: #8b4513;
          margin-bottom: 15px;
          font-size: 1.3em;
       }
-
-      .blog-card p,
-      .guide-card p,
-      .location-card p {
+       .blog-card p, .guide-card p, .location-card p {
          margin-bottom: 15px;
          flex-grow: 1;
       }
-
-      .blog-card a,
-      .guide-card a,
-      .location-card a {
+      .blog-card a, .guide-card a, .location-card a {
          text-decoration: none;
          color: #ff6b35;
          font-weight: bold;
          transition: color 0.3s;
          align-self: flex-start;
       }
-
-      .blog-card a:hover,
-      .guide-card a:hover,
-      .location-card a:hover {
+      .blog-card a:hover, .guide-card a:hover, .location-card a:hover {
          color: #2c3e50;
       }
 
@@ -614,8 +566,8 @@
          </div>
       </div>
    </section>
-
-   <!-- NEW SERVICES SECTION -->
+   
+   <!-- SERVICES SECTION -->
    <section class="services" id="services">
       <div class="container">
          <h2 class="section-title">Our Restoration Services</h2>
@@ -624,32 +576,32 @@
             <div class="service-card">
                <h3>Window Sash Restoration</h3>
                <p>Complete restoration of original double-hung and casement windows using traditional techniques.</p>
-               <a href="services/Window sash restoration.html">Learn More →</a>
+               <a href="services/window-sash-restoration.html">Learn More &rarr;</a>
             </div>
             <div class="service-card">
                <h3>Door Restoration & Repair</h3>
                <p>Bringing historic entry doors back to their original glory, including hardware and glass.</p>
-               <a href="services/Door restoration & repair.html">Learn More →</a>
+               <a href="services/door-restoration-repair.html">Learn More &rarr;</a>
             </div>
             <div class="service-card">
                <h3>Epoxy Consolidation</h3>
                <p>Advanced wood preservation to stabilize and strengthen deteriorated historic elements.</p>
-               <a href="services/Epoxy consolidation process.html">Learn More →</a>
+               <a href="services/epoxy-consolidation-process.html">Learn More &rarr;</a>
             </div>
             <div class="service-card">
                <h3>Historic Glazing</h3>
                <p>Traditional glazing with period-appropriate materials to maintain authentic profiles.</p>
-               <a href="services/Historic glazing services.html">Learn More →</a>
+               <a href="services/historic-glazing-services.html">Learn More &rarr;</a>
             </div>
             <div class="service-card">
                <h3>Weatherization</h3>
                <p>Improve energy efficiency with historically appropriate weatherstripping and sealing.</p>
-               <a href="services/Weatherization for historic windows.html">Learn More →</a>
+               <a href="services/weatherization-for-historic-windows.html">Learn More &rarr;</a>
             </div>
             <div class="service-card">
                <h3>Emergency Rot Repair</h3>
                <p>24/7 emergency service for storm damage, water infiltration, and urgent structural repairs.</p>
-               <a href="services/Emergency rot repair.html">Learn More →</a>
+               <a href="services/emergency-rot-repair.html">Learn More &rarr;</a>
             </div>
          </div>
       </div>
@@ -688,24 +640,24 @@
    <!-- Case Studies Section (Replaces Gallery) -->
    <section class="case-studies" id="case-studies">
       <div class="container">
-         <h2 class="section-title">Real Restoration Stories</h2>
-         <p class="section-subtitle">See how we solve real-world problems for homeowners just like you</p>
-         <div class="case-studies-grid">
-            <div class="case-study-card">
-               <div class="case-study-content">
-                  <h3>In-Depth: 1890s Souderton Colonial</h3>
-                  <p>A detailed look at how we saved 15 "unsalvageable" windows, addressed severe rot, and achieved $7,200 in savings for the homeowner.</p>
-                  <a href="case-studies/souderton-colonial-restoration.html">View Full Case Study →</a>
-               </div>
-            </div>
-            <div class="case-study-card">
-               <div class="case-study-content">
-                  <h3>Transformations & Savings Gallery</h3>
-                  <p>Explore multiple projects showcasing dramatic before-and-after results with exact cost savings figures for each restoration.</p>
-                  <a href="case-studies/restoration-transformations.html">View Transformations →</a>
-               </div>
-            </div>
-         </div>
+          <h2 class="section-title">Real Restoration Stories</h2>
+          <p class="section-subtitle">See how we solve real-world problems for homeowners just like you</p>
+          <div class="case-studies-grid">
+              <div class="case-study-card">
+                  <div class="case-study-content">
+                      <h3>In-Depth: 1890s Souderton Colonial</h3>
+                      <p>A detailed look at how we saved 15 "unsalvageable" windows, addressed severe rot, and achieved $7,200 in savings for the homeowner.</p>
+                      <a href="case-studies/souderton-colonial-restoration.html">View Full Case Study &rarr;</a>
+                  </div>
+              </div>
+              <div class="case-study-card">
+                  <div class="case-study-content">
+                      <h3>Transformations & Savings Gallery</h3>
+                      <p>Explore multiple projects showcasing dramatic before-and-after results with exact cost savings figures for each restoration.</p>
+                      <a href="case-studies/restoration-transformations.html">View Transformations &rarr;</a>
+                  </div>
+              </div>
+          </div>
       </div>
    </section>
 
@@ -736,86 +688,86 @@
 
    <!-- BLOG SECTION -->
    <section class="blog" id="blog">
-      <div class="container">
-         <h2 class="section-title">From Our Blog</h2>
-         <p class="section-subtitle">Expert advice for historic homeowners</p>
-         <div class="blog-grid">
-            <div class="blog-card">
-               <div class="blog-card-content">
-                  <h3>5 Signs Your Historic Windows Need Professional Restoration</h3>
-                  <p>Learn to spot the key warning signs before small problems become costly disasters.</p>
-                  <a href="blog/5 Signs Your Historic Windows Need Professional Restoration.html">Read More →</a>
+       <div class="container">
+           <h2 class="section-title">From Our Blog</h2>
+           <p class="section-subtitle">Expert advice for historic homeowners</p>
+           <div class="blog-grid">
+               <div class="blog-card">
+                   <div class="blog-card-content">
+                       <h3>5 Signs Your Historic Windows Need Professional Restoration</h3>
+                       <p>Learn to spot the key warning signs before small problems become costly disasters.</p>
+                       <a href="blog/5-signs-your-historic-windows-need-professional-restoration.html">Read More &rarr;</a>
+                   </div>
                </div>
-            </div>
-            <div class="blog-card">
-               <div class="blog-card-content">
-                  <h3>Before & After: Saving a 1890s Colonial's Original Character</h3>
-                  <p>See a stunning transformation and learn how we saved irreplaceable historic windows.</p>
-                  <a href="blog/Before & After Saving a 1890s Colonial's Original Character.html">Read More →</a>
+               <div class="blog-card">
+                   <div class="blog-card-content">
+                       <h3>Before & After: Saving a 1890s Colonial's Original Character</h3>
+                       <p>See a stunning transformation and learn how we saved irreplaceable historic windows.</p>
+                       <a href="blog/before-and-after-saving-a-1890s-colonials-original-character.html">Read More &rarr;</a>
+                   </div>
                </div>
-            </div>
-            <div class="blog-card">
-               <div class="blog-card-content">
-                  <h3>The Complete Guide to Wood Window Rot</h3>
-                  <p>Understand the difference between prevention and restoration for window rot.</p>
-                  <a href="blog/The Complete Guide to Wood Window Rot Prevention vs Restoration.html">Read More →</a>
+               <div class="blog-card">
+                   <div class="blog-card-content">
+                       <h3>The Complete Guide to Wood Window Rot</h3>
+                       <p>Understand the difference between prevention and restoration for window rot.</p>
+                       <a href="blog/the-complete-guide-to-wood-window-rot-prevention-vs-restoration.html">Read More &rarr;</a>
+                   </div>
                </div>
-            </div>
-            <div class="blog-card">
-               <div class="blog-card-content">
-                  <h3>Why Souderton Homes Should Never Replace Original Windows</h3>
-                  <p>Discover the value and long-term benefits of restoring over replacing.</p>
-                  <a href="blog/Why Souderton Historic Homes Should Never Replace Original Windows.html">Read More →</a>
+                <div class="blog-card">
+                   <div class="blog-card-content">
+                       <h3>Why Souderton Homes Should Never Replace Original Windows</h3>
+                       <p>Discover the value and long-term benefits of restoring over replacing.</p>
+                       <a href="blog/why-souderton-historic-homes-should-never-replace-original-windows.html">Read More &rarr;</a>
+                   </div>
                </div>
-            </div>
-            <div class="blog-card">
-               <div class="blog-card-content">
-                  <h3>Winter Prep for Historic Windows in Bucks County</h3>
-                  <p>A complete checklist to protect your historic windows from the harsh winter weather.</p>
-                  <a href="blog/Winter Prep for Historic Windows in Bucks County.html">Read More →</a>
+                <div class="blog-card">
+                   <div class="blog-card-content">
+                       <h3>Winter Prep for Historic Windows in Bucks County</h3>
+                       <p>A complete checklist to protect your historic windows from the harsh winter weather.</p>
+                       <a href="blog/winter-prep-for-historic-windows-in-bucks-county.html">Read More &rarr;</a>
+                   </div>
                </div>
-            </div>
-         </div>
-      </div>
+           </div>
+       </div>
    </section>
 
    <!-- GUIDES SECTION -->
    <section class="guides" id="guides">
       <div class="container">
-         <h2 class="section-title">Free Homeowner Guides</h2>
-         <p class="section-subtitle">Download our expert resources to protect and maintain your historic home</p>
-         <div class="guides-grid">
-            <div class="guide-card">
-               <div class="guide-card-content">
-                  <h3>Restore vs. Replace Guide</h3>
-                  <p>Make a confident, cost-effective decision for your windows with our comprehensive guide.</p>
-                  <a href="downloads/Should I Restore or Replace Decision Guide.html">Download Now →</a>
-               </div>
-            </div>
-            <div class="guide-card">
-               <div class="guide-card-content">
-                  <h3>Maintenance Checklist</h3>
-                  <p>Get our step-by-step checklist for keeping your historic windows in perfect condition.</p>
-                  <a href="downloads/Historic Homeowner's Window Maintenance Checklist PDF.html">Download Now →</a>
-               </div>
-            </div>
-            <div class="guide-card">
-               <div class="guide-card-content">
-                  <h3>Seasonal Care Calendar</h3>
-                  <p>A month-by-month plan to care for your windows and prevent seasonal damage.</p>
-                  <a href="downloads/Seasonal Window Care Calendar for Historic Homes.html">Download Now →</a>
-               </div>
-            </div>
-            <div class="guide-card">
-               <div class="guide-card-content">
-                  <h3>Emergency Repair Guide</h3>
-                  <p>Know exactly what to do in a window emergency to protect your home before help arrives.</p>
-                  <a href="downloads/Emergency Window Repair What to Do Before the Pro Arrives.html">Download Now →</a>
-               </div>
-            </div>
-         </div>
+          <h2 class="section-title">Free Homeowner Guides</h2>
+          <p class="section-subtitle">Download our expert resources to protect and maintain your historic home</p>
+          <div class="guides-grid">
+              <div class="guide-card">
+                  <div class="guide-card-content">
+                      <h3>Restore vs. Replace Guide</h3>
+                      <p>Make a confident, cost-effective decision for your windows with our comprehensive guide.</p>
+                      <a href="downloads/should-i-restore-or-replace-decision-guide.html">Download Now &rarr;</a>
+                  </div>
+              </div>
+              <div class="guide-card">
+                  <div class="guide-card-content">
+                      <h3>Maintenance Checklist</h3>
+                      <p>Get our step-by-step checklist for keeping your historic windows in perfect condition.</p>
+                      <a href="downloads/historic-homeowners-window-maintenance-checklist.html">Download Now &rarr;</a>
+                  </div>
+              </div>
+              <div class="guide-card">
+                  <div class="guide-card-content">
+                      <h3>Seasonal Care Calendar</h3>
+                      <p>A month-by-month plan to care for your windows and prevent seasonal damage.</p>
+                      <a href="downloads/seasonal-window-care-calendar-for-historic-homes.html">Download Now &rarr;</a>
+                  </div>
+              </div>
+              <div class="guide-card">
+                  <div class="guide-card-content">
+                      <h3>Emergency Repair Guide</h3>
+                      <p>Know exactly what to do in a window emergency to protect your home before help arrives.</p>
+                      <a href="downloads/emergency-window-repair-guide.html">Download Now &rarr;</a>
+                  </div>
+              </div>
+          </div>
       </div>
-   </section>
+  </section>
 
    <!-- Local Expertise -->
    <section class="local">
@@ -845,14 +797,14 @@
                <div class="location-card-content">
                   <h3>Wood Window Restoration in Souderton</h3>
                   <p>Discover our expert services for Souderton's beautiful Victorian and Colonial homes.</p>
-                  <a href="locations/Wood Window Restoration in Souderton, PA.html">Souderton Services →</a>
+                  <a href="locations/wood-window-restoration-souderton.html">Souderton Services &rarr;</a>
                </div>
             </div>
             <div class="location-card">
                <div class="location-card-content">
                   <h3>Historic Door Repair in Telford</h3>
                   <p>Explore our specialized door restoration for the unique Craftsman and Victorian homes in Telford.</p>
-                  <a href="locations/Historic Door Repair in Telford.html">Telford Services →</a>
+                  <a href="locations/historic-door-repair-telford.html">Telford Services &rarr;</a>
                </div>
             </div>
          </div>
