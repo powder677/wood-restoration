@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Epoxy Consolidation Process</title>
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      body {
+         font-family: 'Open Sans', sans-serif;
+         line-height: 1.6;
+         color: #333;
+         background-color: #f8f5f0;
+      }
+
+      .header {
+         background: linear-gradient(135deg, #8B4513 0%, #5D2906 100%);
+         color: white;
+         padding: 3rem 1rem;
+         text-align: center;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .header h1 {
+         font-family: 'Playfair Display', serif;
+         font-size: 2.8rem;
+         margin-bottom: 1rem;
+         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .header p {
+         font-size: 1.2rem;
+         max-width: 800px;
+         margin: 0 auto;
+         opacity: 0.9;
+      }
+
+      .container {
+         max-width: 1200px;
+         margin: 0 auto;
+         padding: 2rem;
+      }
+
+      .value-proposition {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+         border-left: 5px solid #8B4513;
+      }
+
+      .value-proposition h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .value-proposition p {
+         font-size: 1.1rem;
+         margin-bottom: 1rem;
+         line-height: 1.8;
+      }
+
+      .benefits-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         gap: 1.5rem;
+         margin: 2rem 0;
+      }
+
+      .benefit-card {
+         background: #fff8f0;
+         padding: 1.5rem;
+         border-radius: 8px;
+         border-left: 4px solid #8B4513;
+         transition: transform 0.3s ease;
+      }
+
+      .benefit-card:hover {
+         transform: translateY(-5px);
+      }
+
+      .benefit-card h3 {
+         color: #5D2906;
+         margin-bottom: 0.8rem;
+      }
+
+      .process-section {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+      }
+
+      .process-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         text-align: center;
+         margin-bottom: 2rem;
+         font-size: 2rem;
+      }
+
+      .process-steps {
+         counter-reset: step-counter;
+         margin: 2rem 0;
+      }
+
+      .step {
+         counter-increment: step-counter;
+         margin-bottom: 2rem;
+         padding-left: 3rem;
+         position: relative;
+         border-bottom: 1px dashed #e8e0d4;
+         padding-bottom: 1.5rem;
+      }
+
+      .step:last-child {
+         border-bottom: none;
+      }
+
+      .step::before {
+         content: counter(step-counter);
+         position: absolute;
+         left: 0;
+         top: 0;
+         background: #8B4513;
+         color: white;
+         width: 30px;
+         height: 30px;
+         border-radius: 50%;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         font-weight: bold;
+      }
+
+      .step h3 {
+         color: #5D2906;
+         margin-bottom: 0.5rem;
+      }
+
+      .technical-section {
+         background: linear-gradient(135deg, #5D2906 0%, #8B4513 100%);
+         color: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         margin-bottom: 2rem;
+      }
+
+      .technical-section h2 {
+         font-family: 'Playfair Display', serif;
+         text-align: center;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .technical-content {
+         max-width: 800px;
+         margin: 0 auto;
+      }
+
+      .technical-content p {
+         margin-bottom: 1rem;
+         line-height: 1.8;
+      }
+
+      .gallery-section {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+      }
+
+      .gallery-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         text-align: center;
+         margin-bottom: 2rem;
+         font-size: 2rem;
+      }
+
+      .gallery-container {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         gap: 2rem;
+         margin: 2rem 0;
+      }
+
+      .gallery-item {
+         background: #fff8f0;
+         border-radius: 10px;
+         overflow: hidden;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+         transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover {
+         transform: translateY(-5px);
+      }
+
+      .gallery-item img {
+         width: 100%;
+         height: 200px;
+         object-fit: cover;
+         border-bottom: 3px solid #8B4513;
+      }
+
+      .gallery-content {
+         padding: 1.5rem;
+      }
+
+      .gallery-content h3 {
+         color: #5D2906;
+         margin-bottom: 0.8rem;
+         font-size: 1.3rem;
+      }
+
+      .testimonial-section {
+         background: white;
+         padding: 3rem;
+         border-radius: 10px;
+         text-align: center;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         border: 2px solid #8B4513;
+      }
+
+      .testimonial-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         margin-bottom: 2rem;
+         font-size: 2rem;
+      }
+
+      .testimonial-content {
+         max-width: 800px;
+         margin: 0 auto;
+         font-size: 1.2rem;
+         font-style: italic;
+         line-height: 1.8;
+         color: #5D2906;
+      }
+
+      .testimonial-content::before,
+      .testimonial-content::after {
+         content: "" ";
+ font-size: 3rem;
+         color: #8B4513;
+         opacity: 0.3;
+      }
+
+      .customer-name {
+         margin-top: 1.5rem;
+         font-weight: 600;
+         font-style: normal;
+         color: #333;
+      }
+
+      .customer-location {
+         font-size: 0.9rem;
+         opacity: 0.8;
+         font-style: normal;
+         color: #666;
+      }
+
+      .cta-section {
+         background: linear-gradient(135deg, #8B4513 0%, #5D2906 100%);
+         color: white;
+         padding: 3rem;
+         border-radius: 10px;
+         text-align: center;
+         margin-top: 2rem;
+      }
+
+      .cta-section h2 {
+         font-family: 'Playfair Display', serif;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .cta-button {
+         display: inline-block;
+         background: white;
+         color: #5D2906;
+         padding: 1rem 2.5rem;
+         font-size: 1.2rem;
+         text-decoration: none;
+         border-radius: 50px;
+         font-weight: 600;
+         transition: all 0.3s ease;
+         box-shadow: 0 4px 15px rgba(0, 0, 0, 0.3);
+         border: 2px solid white;
+      }
+
+      .cta-button:hover {
+         background: transparent;
+         color: white;
+         transform: translateY(-3px);
+         box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4);
+      }
+
+      @media (max-width: 768px) {
+         .header h1 {
+            font-size: 2.2rem;
+         }
+
+         .container {
+            padding: 1rem;
+         }
+
+         .value-proposition,
+         .process-section,
+         .technical-section,
+         .gallery-section {
+            padding: 1.5rem;
+         }
+
+         .benefits-grid,
+         .gallery-container {
+            grid-template-columns: 1fr;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <header class="header">
+      <h1>Expert Epoxy Consolidation Process</h1>
+      <p>Our specialized, proven process delivers superior results, saves you money, and protects your home's value.</p>
+   </header>
+
+   <div class="container">
+      <section class="value-proposition">
+         <h2>Advanced Technology for Historic Preservation</h2>
+         <p>Epoxy consolidation is a cutting-edge preservation technique that strengthens deteriorated wood while maintaining its original appearance and structural integrity. This specialized process is essential for treating wood rot, insect damage, and general deterioration in historic windows, doors, and architectural elements without compromising their historical significance.</p>
+         <p>Unlike traditional methods that require complete replacement of damaged sections, epoxy consolidation allows us to preserve the maximum amount of original material while creating a stable, long-lasting repair that can withstand the test of time.</p>
+
+         <div class="benefits-grid">
+            <div class="benefit-card">
+               <h3>Maximum Material Preservation</h3>
+               <p>Stabilize and strengthen deteriorated wood in place, preserving original profiles, details, and historical character that would be lost through replacement.</p>
+            </div>
+            <div class="benefit-card">
+               <h3>Superior Structural Integrity</h3>
+               <p>Create repairs that are stronger than the original wood, providing decades of service life while maintaining authentic appearance.</p>
+            </div>
+            <div class="benefit-card">
+               <h3>Cost-Effective Solution</h3>
+               <p>Significantly reduce restoration costs by eliminating the need for extensive wood replacement while achieving superior long-term results.</p>
+            </div>
+         </div>
+      </section>
+
+      <section class="process-section">
+         <h2>Our Epoxy Consolidation Process</h2>
+         <div class="process-steps">
+            <div class="step">
+               <h3>Comprehensive Assessment</h3>
+               <p>We begin with a detailed inspection to identify areas of wood deterioration, assess the extent of damage, and determine the most appropriate consolidation approach. This includes moisture testing and structural evaluation.</p>
+            </div>
+            <div class="step">
+               <h3>Precise Excavation</h3>
+               <p>Soft, deteriorated wood is carefully removed using specialized tools, leaving only sound material as the foundation for consolidation. This ensures proper epoxy penetration and adhesion.</p>
+            </div>
+            <div class="step">
+               <h3>Surface Preparation</h3>
+               <p>The exposed wood is thoroughly cleaned and prepared to ensure optimal epoxy adhesion. This may include light sanding, removal of contaminants, and moisture control.</p>
+            </div>
+            <div class="step">
+               <h3>Epoxy Application</h3>
+               <p>High-quality, conservation-grade epoxy is carefully applied using low-pressure injection techniques to penetrate deep into the wood structure, filling voids and strengthening fibers.</p>
+            </div>
+            <div class="step">
+               <h3>Curing & Monitoring</h3>
+               <p>The epoxy is allowed to cure under controlled conditions, with careful monitoring to ensure proper penetration and structural development. Additional applications may be made as needed.</p>
+            </div>
+            <div class="step">
+               <h3>Surface Finishing</h3>
+               <p>Once fully cured, the consolidated areas are shaped, sanded, and prepared for final finishing. The repair is virtually invisible and ready for paint or stain application.</p>
+            </div>
+         </div>
+      </section>
+
+      <section class="technical-section">
+         <h2>The Science Behind Epoxy Consolidation</h2>
+         <div class="technical-content">
+            <p>Our epoxy consolidation process uses advanced conservation-grade materials specifically formulated for historic preservation applications. These epoxies penetrate deep into deteriorated wood fibers, creating a strong bond that restores structural integrity while remaining reversible for future conservation work.</p>
+            <p>The low-viscosity formulations flow easily into voids and damaged areas, displacing moisture and air to create a solid, stable matrix. Once cured, the consolidated wood becomes stronger than the original material while maintaining its dimensional stability and workability for subsequent finishing operations.</p>
+            <p>This technique is widely recognized by historic preservation professionals and meets the standards of leading preservation organizations. It's particularly effective for treating advanced wood rot, insect damage, and general deterioration in historic architectural elements.</p>
+         </div>
+      </section>
+
+      <section class="gallery-section">
+         <h2>Epoxy Consolidation Transformation</h2>
+         <div class="gallery-container">
+            <div class="gallery-item">
+               <img src="https://placehold.co/400x200/8B4513/FFFFFF?text=Before+Epoxy+Treatment" alt="Before epoxy consolidation">
+               <div class="gallery-content">
+                  <h3>Before Treatment</h3>
+                  <p>Severe wood rot in window sill with soft, crumbling texture that compromised structural integrity and water shedding capability.</p>
+               </div>
+            </div>
+            <div class="gallery-item">
+               <img src="https://placehold.co/400x200/5D2906/FFFFFF?text=During+Epoxy+Process" alt="During epoxy consolidation">
+               <div class="gallery-content">
+                  <h3>During Process</h3>
+                  <p>Precision application of conservation-grade epoxy using low-pressure injection techniques to penetrate deep into deteriorated wood.</p>
+               </div>
+            </div>
+            <div class="gallery-item">
+               <img src="https://placehold.co/400x200/8B4513/FFFFFF?text=After+Epoxy+Treatment" alt="After epoxy consolidation">
+               <div class="gallery-content">
+                  <h3>After Treatment</h3>
+                  <p>Structurally sound sill with restored integrity, ready for final shaping and finishing to match original profiles.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="testimonial-section">
+         <h2>What Our Customers Say</h2>
+         <div class="testimonial-content">
+            I was devastated when my historic home inspector found severe rot in the window sills of my 1850s farmhouse. The estimate for traditional replacement was astronomical and would have destroyed the original character. The epoxy consolidation process saved the day - they stabilized the existing sills and only replaced the most damaged sections. The result is indistinguishable from the original, costs a fraction of replacement, and comes with a 25-year warranty. Brilliant solution!
+            <div class="customer-name">Michael & Patricia Reynolds</div>
+            <div class="customer-location">Lambertville, Bucks County</div>
+         </div>
+      </section>
+
+      <section class="cta-section">
+         <h2>Discover the Epoxy Consolidation Advantage</h2>
+         <p>Get a detailed, no-obligation quote for your epoxy consolidation project. Our preservation experts will assess your specific needs and provide a customized solution that protects your investment while maintaining historical authenticity.</p>
+         <a href="#contact" class="cta-button">Get a Detailed Quote for Your Epoxy Consolidation Project</a>
+      </section>
+   </div>
+
+   <script>
+      document.querySelector('.cta-button').addEventListener('click', function(e) {
+         e.preventDefault();
+         alert('Thank you for your interest! In a real implementation, this would open a contact form for a detailed quote.');
+      });
+   </script>
+</body>
+
+</html>

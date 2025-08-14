@@ -1,0 +1,462 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Winter Prep for Historic Windows in Bucks County</title>
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      body {
+         font-family: 'Open Sans', sans-serif;
+         line-height: 1.6;
+         color: #333;
+         background-color: #f8f5f0;
+      }
+
+      .header {
+         background: linear-gradient(135deg, #8B4513 0%, #5D2906 100%);
+         color: white;
+         padding: 3rem 1rem;
+         text-align: center;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .header h1 {
+         font-family: 'Playfair Display', serif;
+         font-size: 2.8rem;
+         margin-bottom: 1rem;
+         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .header p {
+         font-size: 1.2rem;
+         max-width: 800px;
+         margin: 0 auto;
+         opacity: 0.9;
+      }
+
+      .container {
+         max-width: 1200px;
+         margin: 0 auto;
+         padding: 2rem;
+      }
+
+      .intro {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+         border-left: 5px solid #8B4513;
+      }
+
+      .intro h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .intro p {
+         font-size: 1.1rem;
+         margin-bottom: 1rem;
+         line-height: 1.8;
+      }
+
+      .winter-section {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+      }
+
+      .winter-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         text-align: center;
+         margin-bottom: 2rem;
+         font-size: 2rem;
+      }
+
+      .tips-grid {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         gap: 2rem;
+         margin: 2rem 0;
+      }
+
+      .tip-card {
+         background: #fff8f0;
+         padding: 1.5rem;
+         border-radius: 8px;
+         border: 1px solid #e8e0d4;
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .tip-card:hover {
+         transform: translateY(-5px);
+         box-shadow: 0 8px 20px rgba(139, 69, 19, 0.15);
+      }
+
+      .tip-card h3 {
+         color: #5D2906;
+         margin-bottom: 1rem;
+         font-size: 1.3rem;
+         display: flex;
+         align-items: center;
+      }
+
+      .tip-card h3::before {
+         content: "❄";
+         color: #8B4513;
+         font-size: 1.5rem;
+         margin-right: 10px;
+      }
+
+      .warning-section {
+         background: #fff0f0;
+         padding: 2.5rem;
+         border-radius: 10px;
+         margin-bottom: 2rem;
+         border-left: 5px solid #c00;
+      }
+
+      .warning-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #8B0000;
+         text-align: center;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .warning-list {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         gap: 1.5rem;
+         margin: 2rem 0;
+      }
+
+      .warning-item {
+         background: #ffe8e8;
+         padding: 1.5rem;
+         border-radius: 8px;
+         border-left: 4px solid #c00;
+      }
+
+      .warning-item h3 {
+         color: #8B0000;
+         margin-bottom: 0.8rem;
+      }
+
+      .maintenance-checklist {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+      }
+
+      .maintenance-checklist h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         text-align: center;
+         margin-bottom: 2rem;
+         font-size: 2rem;
+      }
+
+      .checklist {
+         max-width: 800px;
+         margin: 0 auto;
+      }
+
+      .checklist-item {
+         padding: 1rem;
+         border-bottom: 1px solid #e8e0d4;
+         display: flex;
+         align-items: center;
+      }
+
+      .checklist-item:last-child {
+         border-bottom: none;
+      }
+
+      .checklist-item input {
+         margin-right: 1rem;
+         width: 20px;
+         height: 20px;
+      }
+
+      .emergency-section {
+         background: linear-gradient(135deg, #5D2906 0%, #8B4513 100%);
+         color: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         margin-bottom: 2rem;
+      }
+
+      .emergency-section h2 {
+         font-family: 'Playfair Display', serif;
+         text-align: center;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .emergency-steps {
+         max-width: 800px;
+         margin: 0 auto;
+         padding-left: 1.5rem;
+      }
+
+      .emergency-steps li {
+         margin-bottom: 1rem;
+         font-size: 1.1rem;
+      }
+
+      .cta-section {
+         background: white;
+         padding: 3rem;
+         border-radius: 10px;
+         text-align: center;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         border: 2px solid #8B4513;
+      }
+
+      .cta-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .cta-button {
+         display: inline-block;
+         background: #8B4513;
+         color: white;
+         padding: 1rem 2.5rem;
+         font-size: 1.2rem;
+         text-decoration: none;
+         border-radius: 50px;
+         font-weight: 600;
+         transition: all 0.3s ease;
+         box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+         border: 2px solid #5D2906;
+      }
+
+      .cta-button:hover {
+         background: #5D2906;
+         transform: translateY(-3px);
+         box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+      }
+
+      .key-message {
+         text-align: center;
+         font-size: 1.4rem;
+         font-weight: 600;
+         color: #8B4513;
+         margin: 2rem 0;
+         font-style: italic;
+         padding: 1.5rem;
+         background: #fff8f0;
+         border-radius: 8px;
+         border: 1px dashed #8B4513;
+      }
+
+      @media (max-width: 768px) {
+         .header h1 {
+            font-size: 2.2rem;
+         }
+
+         .container {
+            padding: 1rem;
+         }
+
+         .intro,
+         .winter-section,
+         .warning-section,
+         .maintenance-checklist,
+         .emergency-section {
+            padding: 1.5rem;
+         }
+
+         .tips-grid,
+         .warning-list {
+            grid-template-columns: 1fr;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <header class="header">
+      <h1>Winter Prep for Historic Windows in Bucks County</h1>
+      <p>We understand the unique problems of historic homes, and we have the expertise to solve them. Restoration is smarter than replacement.</p>
+   </header>
+
+   <div class="container">
+      <section class="intro">
+         <h2>Protecting Your Historic Home Through Bucks County Winters</h2>
+         <p>As temperatures drop in Bucks County, historic homeowners face unique challenges that modern homes simply don't experience. Your beautiful original windows, while architecturally significant, may be showing signs of vulnerability to the harsh winter conditions that define our region.</p>
+         <p>Don't let winter weather compromise the character and comfort of your historic home. With proper preparation and understanding of your windows' unique needs, you can ensure they not only survive the winter but continue to enhance your home's timeless appeal for decades to come.</p>
+      </section>
+
+      <div class="key-message">
+         "We understand the unique problems of historic homes, and we have the expertise to solve them. Restoration is smarter than replacement."
+      </div>
+
+      <section class="winter-section">
+         <h2>Essential Winter Preparation Tips</h2>
+         <div class="tips-grid">
+            <div class="tip-card">
+               <h3>Inspect Weatherstripping</h3>
+               <p>Check all window seals and weatherstripping for gaps or deterioration. Replace worn materials with historically appropriate options that provide effective air sealing without compromising window operation.</p>
+            </div>
+            <div class="tip-card">
+               <h3>Address Drafts Immediately</h3>
+               <p>Feel for air leaks around window frames and sashes. Simple adjustments or temporary weatherstripping can dramatically improve comfort and energy efficiency until permanent solutions are implemented.</p>
+            </div>
+            <div class="tip-card">
+               <h3>Check Window Operation</h3>
+               <p>Ensure all windows open and close smoothly before winter sets in. Sticking windows can trap moisture and become difficult to operate in cold weather, potentially causing damage.</p>
+            </div>
+            <div class="tip-card">
+               <h3>Examine Exterior Caulking</h3>
+               <p>Inspect the caulking around window frames where they meet the wall. Renew deteriorated caulk to prevent water infiltration that can freeze and cause structural damage.</p>
+            </div>
+            <div class="tip-card">
+               <h3>Protect Against Moisture</h3>
+               <p>Ensure proper drainage around window sills and frames. Clear debris that could trap water and lead to wood rot or ice damming during freeze-thaw cycles.</p>
+            </div>
+            <div class="tip-card">
+               <h3>Maintain Interior Humidity</h3>
+               <p>Keep indoor humidity between 30-40% to prevent condensation on windows while avoiding conditions that promote wood swelling and paint failure.</p>
+            </div>
+         </div>
+      </section>
+
+      <section class="warning-section">
+         <h2>Warning Signs Requiring Immediate Attention</h2>
+         <div class="warning-list">
+            <div class="warning-item">
+               <h3>Water Intrusion</h3>
+               <p>Any signs of water around window frames, sills, or walls indicate serious issues that can lead to structural damage and costly repairs if not addressed before winter.</p>
+            </div>
+            <div class="warning-item">
+               <h3>Severe Drafts</h3>
+               <p>Strong drafts suggest significant air leakage that will make your home uncomfortable and expensive to heat during the coldest months.</p>
+            </div>
+            <div class="warning-item">
+               <h3>Sticking or Jammed Windows</h3>
+               <p>Windows that don't operate smoothly may become impossible to open or close in cold weather, trapping moisture and creating potential safety hazards.</p>
+            </div>
+            <div class="warning-item">
+               <h3>Visible Wood Rot</h3>
+               <p>Soft, crumbling, or discolored wood indicates active deterioration that will worsen with winter moisture and temperature fluctuations.</p>
+            </div>
+            <div class="warning-item">
+               <h3>Cracked or Broken Glass</h3>
+               <p>Any damage to window glass compromises insulation and security, requiring immediate attention to prevent further damage and energy loss.</p>
+            </div>
+            <div class="warning-item">
+               <h3>Peeling or Blistering Paint</h3>
+               <p>Failing paint systems allow moisture penetration and indicate underlying wood problems that will accelerate during winter conditions.</p>
+            </div>
+         </div>
+      </section>
+
+      <section class="maintenance-checklist">
+         <h2>Winter Readiness Checklist</h2>
+         <div class="checklist">
+            <div class="checklist-item">
+               <input type="checkbox" id="item1">
+               <label for="item1">Inspect all windows for proper operation and make necessary adjustments</label>
+            </div>
+            <div class="checklist-item">
+               <input type="checkbox" id="item2">
+               <label for="item2">Replace worn or damaged weatherstripping with appropriate materials</label>
+            </div>
+            <div class="checklist-item">
+               <input type="checkbox" id="item3">
+               <label for="item3">Check and renew exterior caulking around window frames</label>
+            </div>
+            <div class="checklist-item">
+               <input type="checkbox" id="item4">
+               <label for="item4">Clean window tracks and channels to ensure smooth operation</label>
+            </div>
+            <div class="checklist-item">
+               <input type="checkbox" id="item5">
+               <label for="item5">Address any signs of wood rot or water damage immediately</label>
+            </div>
+            <div class="checklist-item">
+               <input type="checkbox" id="item6">
+               <label for="item6">Ensure proper drainage around all window sills and frames</label>
+            </div>
+            <div class="checklist-item">
+               <input type="checkbox" id="item7">
+               <label for="item7">Check for and repair any cracked or damaged glass</label>
+            </div>
+            <div class="checklist-item">
+               <input type="checkbox" id="item8">
+               <label for="item8">Apply appropriate lubricants to hardware for smooth winter operation</label>
+            </div>
+            <div class="checklist-item">
+               <input type="checkbox" id="item9">
+               <label for="item9">Install temporary storm windows or insulating film if needed</label>
+            </div>
+            <div class="checklist-item">
+               <input type="checkbox" id="item10">
+               <label for="item10">Schedule professional assessment for any concerning issues</label>
+            </div>
+         </div>
+      </section>
+
+      <section class="emergency-section">
+         <h2>Emergency Winter Window Problems</h2>
+         <p>If you encounter these serious issues during winter, immediate action is required:</p>
+         <ul class="emergency-steps">
+            <li><strong>Broken Glass:</strong> Cover temporarily with plywood or heavy plastic, then contact a professional immediately for proper repair or replacement with historically appropriate materials.</li>
+            <li><strong>Severe Water Intrusion:</strong> Remove standing water, identify the source, and implement temporary waterproofing until permanent repairs can be made.</li>
+            <li><strong>Frozen Windows:</strong> Never force operation. Warm the area gently and address underlying moisture issues that caused freezing.</li>
+            <li><strong>Structural Damage:</strong> Any signs of frame warping, significant rot, or structural compromise require immediate professional evaluation.</li>
+            <li><strong>Complete Hardware Failure:</strong> When latches, locks, or operating mechanisms fail completely, temporary securing may be necessary until proper restoration can be completed.</li>
+         </ul>
+      </section>
+
+      <section class="cta-section">
+         <h2>Prepare Your Windows for Winter's Worst</h2>
+         <p>Don't wait for the first cold snap to discover problems with your historic windows. Our expert team understands the unique challenges that Bucks County winters present to older homes and can help you prepare effectively.</p>
+         <a href="#contact" class="cta-button">Contact Us for a FREE, No-Obligation Assessment</a>
+      </section>
+   </div>
+
+   <script>
+      document.querySelector('.cta-button').addEventListener('click', function(e) {
+         e.preventDefault();
+         alert('Thank you for your interest! In a real implementation, this would scroll to a contact form or open a modal with contact information.');
+      });
+
+      // Add functionality to checklist items
+      const checkboxes = document.querySelectorAll('.checklist-item input');
+      checkboxes.forEach(checkbox => {
+         checkbox.addEventListener('change', function() {
+            const label = this.nextElementSibling;
+            if (this.checked) {
+               label.style.textDecoration = 'line-through';
+               label.style.color = '#666';
+            } else {
+               label.style.textDecoration = 'none';
+               label.style.color = '#333';
+            }
+         });
+      });
+   </script>
+</body>
+
+</html>

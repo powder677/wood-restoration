@@ -1,0 +1,306 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Why Souderton Historic Homes Should Never Replace Original Windows</title>
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      body {
+         font-family: 'Open Sans', sans-serif;
+         line-height: 1.6;
+         color: #333;
+         background-color: #f8f5f0;
+      }
+
+      .header {
+         background: linear-gradient(135deg, #8B4513 0%, #5D2906 100%);
+         color: white;
+         padding: 3rem 1rem;
+         text-align: center;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .header h1 {
+         font-family: 'Playfair Display', serif;
+         font-size: 2.8rem;
+         margin-bottom: 1rem;
+         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .header p {
+         font-size: 1.2rem;
+         max-width: 800px;
+         margin: 0 auto;
+         opacity: 0.9;
+      }
+
+      .container {
+         max-width: 1200px;
+         margin: 0 auto;
+         padding: 2rem;
+      }
+
+      .intro {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+         border-left: 5px solid #8B4513;
+      }
+
+      .intro h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .intro p {
+         font-size: 1.1rem;
+         margin-bottom: 1rem;
+         line-height: 1.8;
+      }
+
+      .signs-section {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+      }
+
+      .signs-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         text-align: center;
+         margin-bottom: 2rem;
+         font-size: 2rem;
+      }
+
+      .signs-list {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         gap: 2rem;
+         margin-top: 2rem;
+      }
+
+      .sign-item {
+         background: #fff8f0;
+         padding: 1.5rem;
+         border-radius: 8px;
+         border: 1px solid #e8e0d4;
+         transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .sign-item:hover {
+         transform: translateY(-5px);
+         box-shadow: 0 8px 20px rgba(139, 69, 19, 0.15);
+      }
+
+      .sign-item h3 {
+         color: #8B4513;
+         margin-bottom: 1rem;
+         display: flex;
+         align-items: center;
+         font-size: 1.3rem;
+      }
+
+      .sign-item h3::before {
+         content: "•";
+         color: #8B4513;
+         font-size: 2rem;
+         margin-right: 10px;
+      }
+
+      .what-to-do {
+         background: linear-gradient(135deg, #5D2906 0%, #8B4513 100%);
+         color: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         margin-bottom: 2rem;
+      }
+
+      .what-to-do h2 {
+         font-family: 'Playfair Display', serif;
+         text-align: center;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .what-to-do ul {
+         max-width: 800px;
+         margin: 0 auto;
+         padding-left: 1.5rem;
+      }
+
+      .what-to-do li {
+         margin-bottom: 1rem;
+         font-size: 1.1rem;
+      }
+
+      .cta-section {
+         background: white;
+         padding: 3rem;
+         border-radius: 10px;
+         text-align: center;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         border: 2px solid #8B4513;
+      }
+
+      .cta-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .cta-button {
+         display: inline-block;
+         background: #8B4513;
+         color: white;
+         padding: 1rem 2.5rem;
+         font-size: 1.2rem;
+         text-decoration: none;
+         border-radius: 50px;
+         font-weight: 600;
+         transition: all 0.3s ease;
+         box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+         border: 2px solid #5D2906;
+      }
+
+      .cta-button:hover {
+         background: #5D2906;
+         transform: translateY(-3px);
+         box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+      }
+
+      .expertise-box {
+         background: #e8f4f8;
+         padding: 2rem;
+         border-radius: 10px;
+         margin: 2rem 0;
+         border-left: 5px solid #8B4513;
+      }
+
+      .expertise-box h3 {
+         color: #5D2906;
+         margin-bottom: 1rem;
+         font-size: 1.5rem;
+      }
+
+      .key-message {
+         text-align: center;
+         font-size: 1.4rem;
+         font-weight: 600;
+         color: #8B4513;
+         margin: 2rem 0;
+         font-style: italic;
+         padding: 1.5rem;
+         background: #fff8f0;
+         border-radius: 8px;
+         border: 1px dashed #8B4513;
+      }
+
+      @media (max-width: 768px) {
+         .header h1 {
+            font-size: 2.2rem;
+         }
+
+         .container {
+            padding: 1rem;
+         }
+
+         .intro,
+         .signs-section,
+         .what-to-do,
+         .cta-section {
+            padding: 1.5rem;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <header class="header">
+      <h1>Why Souderton Historic Homes Should Never Replace Original Windows</h1>
+      <p>We understand the unique problems of historic homes, and we have the expertise to solve them. Restoration is smarter than replacement.</p>
+   </header>
+
+   <div class="container">
+      <section class="intro">
+         <h2>Preserving Souderton's Historic Character</h2>
+         <p>If you're a homeowner in Souderton or Bucks County, you know that historic homes come with their own set of challenges. Those beautiful original windows that give your property its timeless charm might be showing signs of wear, but replacing them could be one of the biggest mistakes you make.</p>
+         <p>Original windows in historic homes aren't just functional elements—they're architectural treasures that define the character of your neighborhood. Unfortunately, many well-meaning homeowners turn to replacement when restoration is the smarter, more cost-effective solution that preserves both beauty and value.</p>
+      </section>
+
+      <div class="key-message">
+         "We understand the unique problems of historic homes, and we have the expertise to solve them. Restoration is smarter than replacement."
+      </div>
+
+      <section class="signs-section">
+         <h2>5 Signs Your Historic Windows Need Professional Restoration</h2>
+         <div class="signs-list">
+            <div class="sign-item">
+               <h3>Sticking or Hard-to-Operate Windows</h3>
+               <p>Original windows that have become difficult to open or close often just need proper adjustment and restoration of their original hardware mechanisms.</p>
+            </div>
+            <div class="sign-item">
+               <h3>Energy Efficiency Concerns</h3>
+               <p>While old windows may feel drafty, restoration with proper weatherstripping and maintenance can significantly improve energy efficiency without losing authenticity.</p>
+            </div>
+            <div class="sign-item">
+               <h3>Visible Paint Buildup</h3>
+               <p>Multiple layers of paint can prevent windows from closing properly and trap moisture, leading to wood rot if not properly addressed through gentle stripping.</p>
+            </div>
+            <div class="sign-item">
+               <h3>Rotting or Damaged Wood</h3>
+               <p>Localized wood damage doesn't mean complete replacement is necessary. Expert restoration can repair and replace only the affected sections while maintaining original character.</p>
+            </div>
+            <div class="sign-item">
+               <h3>Poor Curb Appeal</h3>
+               <p>Faded paint, broken hardware, or foggy glass can make beautiful windows look unsightly. Professional restoration brings back their original elegance and charm.</p>
+            </div>
+         </div>
+      </section>
+
+      <div class="expertise-box">
+         <h3>Why Restoration Experts Matter for Historic Homes</h3>
+         <p>Historic windows require specialized knowledge and techniques that modern window installers often lack. Our team understands the unique materials, construction methods, and preservation requirements that make your home's windows irreplaceable.</p>
+      </div>
+
+      <section class="what-to-do">
+         <h2>What to Do About Your Historic Windows</h2>
+         <ul>
+            <li><strong>Stop considering replacement immediately</strong> - Original windows can almost always be restored to better-than-new condition</li>
+            <li><strong>Schedule a professional assessment</strong> - Our experts can identify specific issues and recommend targeted restoration solutions</li>
+            <li><strong>Learn about proper maintenance techniques</strong> - We'll teach you how to care for your windows to prevent future problems</li>
+            <li><strong>Invest in quality restoration</strong> - Proper restoration preserves your home's value and authenticity while solving functional issues</li>
+            <li><strong>Consider the long-term benefits</strong> - Restored windows last longer, maintain property value, and preserve historic character</li>
+         </ul>
+      </section>
+
+      <section class="cta-section">
+         <h2>Preserve Your Home's Historic Character</h2>
+         <p>Don't let common window problems diminish the value and beauty of your historic Souderton home. Our restoration experts understand the unique challenges of older properties and have the skills to bring your original windows back to life.</p>
+         <a href="#contact" class="cta-button">Contact Us for a FREE, No-Obligation Assessment</a>
+      </section>
+   </div>
+
+   <script>
+      document.querySelector('.cta-button').addEventListener('click', function(e) {
+         e.preventDefault();
+         alert('Thank you for your interest! In a real implementation, this would scroll to a contact form or open a modal with contact information.');
+      });
+   </script>
+</body>
+
+</html>

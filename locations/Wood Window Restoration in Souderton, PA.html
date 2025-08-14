@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+   <meta charset="UTF-8">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+   <title>Wood Window Restoration in Souderton, PA</title>
+   <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@400;700&family=Open+Sans:wght@300;400;600&display=swap" rel="stylesheet">
+   <style>
+      * {
+         margin: 0;
+         padding: 0;
+         box-sizing: border-box;
+      }
+
+      body {
+         font-family: 'Open Sans', sans-serif;
+         line-height: 1.6;
+         color: #333;
+         background-color: #f8f5f0;
+      }
+
+      .header {
+         background: linear-gradient(135deg, #8B4513 0%, #5D2906 100%);
+         color: white;
+         padding: 3rem 1rem;
+         text-align: center;
+         box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
+      }
+
+      .header h1 {
+         font-family: 'Playfair Display', serif;
+         font-size: 2.8rem;
+         margin-bottom: 1rem;
+         text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+      }
+
+      .header p {
+         font-size: 1.2rem;
+         max-width: 800px;
+         margin: 0 auto;
+         opacity: 0.9;
+      }
+
+      .container {
+         max-width: 1200px;
+         margin: 0 auto;
+         padding: 2rem;
+      }
+
+      .hero-section {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+         border-left: 5px solid #8B4513;
+         text-align: center;
+      }
+
+      .hero-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .hero-section p {
+         font-size: 1.1rem;
+         margin-bottom: 1rem;
+         line-height: 1.8;
+      }
+
+      .local-proof {
+         background: #fff8f0;
+         padding: 1.5rem;
+         border-radius: 8px;
+         margin: 1.5rem 0;
+         border: 2px dashed #8B4513;
+      }
+
+      .local-proof h3 {
+         color: #8B4513;
+         margin-bottom: 0.5rem;
+      }
+
+      .work-section {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+      }
+
+      .work-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         text-align: center;
+         margin-bottom: 2rem;
+         font-size: 2rem;
+      }
+
+      .gallery-container {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+         gap: 2rem;
+         margin: 2rem 0;
+      }
+
+      .gallery-item {
+         background: #fff8f0;
+         border-radius: 10px;
+         overflow: hidden;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+         transition: transform 0.3s ease;
+      }
+
+      .gallery-item:hover {
+         transform: translateY(-5px);
+      }
+
+      .gallery-item img {
+         width: 100%;
+         height: 200px;
+         object-fit: cover;
+         border-bottom: 3px solid #8B4513;
+      }
+
+      .gallery-content {
+         padding: 1.5rem;
+      }
+
+      .gallery-content h3 {
+         color: #5D2906;
+         margin-bottom: 0.8rem;
+         font-size: 1.3rem;
+      }
+
+      .testimonial-section {
+         background: linear-gradient(135deg, #5D2906 0%, #8B4513 100%);
+         color: white;
+         padding: 3rem;
+         border-radius: 10px;
+         margin-bottom: 2rem;
+         text-align: center;
+      }
+
+      .testimonial-section h2 {
+         font-family: 'Playfair Display', serif;
+         margin-bottom: 2rem;
+         font-size: 2rem;
+      }
+
+      .testimonial-content {
+         max-width: 800px;
+         margin: 0 auto;
+         font-size: 1.2rem;
+         font-style: italic;
+         line-height: 1.8;
+      }
+
+      .testimonial-content::before,
+      .testimonial-content::after {
+         content: "" ";
+ font-size: 3rem;
+         color: rgba(255, 255, 255, 0.3);
+      }
+
+      .customer-name {
+         margin-top: 1.5rem;
+         font-weight: 600;
+         font-style: normal;
+      }
+
+      .customer-location {
+         font-size: 0.9rem;
+         opacity: 0.8;
+         font-style: normal;
+      }
+
+      .map-section {
+         background: white;
+         padding: 2.5rem;
+         border-radius: 10px;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         margin-bottom: 2rem;
+         text-align: center;
+      }
+
+      .map-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .map-placeholder {
+         background: #e8f4f8;
+         height: 300px;
+         border-radius: 10px;
+         display: flex;
+         align-items: center;
+         justify-content: center;
+         margin: 1.5rem 0;
+         border: 2px dashed #8B4513;
+      }
+
+      .map-placeholder p {
+         color: #5D2906;
+         font-size: 1.2rem;
+         font-weight: 600;
+      }
+
+      .services-list {
+         display: grid;
+         grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+         gap: 1.5rem;
+         margin: 2rem 0;
+      }
+
+      .service-item {
+         background: #fff8f0;
+         padding: 1.5rem;
+         border-radius: 8px;
+         border-left: 4px solid #8B4513;
+      }
+
+      .service-item h3 {
+         color: #5D2906;
+         margin-bottom: 0.5rem;
+      }
+
+      .cta-section {
+         background: white;
+         padding: 3rem;
+         border-radius: 10px;
+         text-align: center;
+         box-shadow: 0 5px 15px rgba(0, 0, 0, 0.08);
+         border: 2px solid #8B4513;
+      }
+
+      .cta-section h2 {
+         font-family: 'Playfair Display', serif;
+         color: #5D2906;
+         margin-bottom: 1.5rem;
+         font-size: 2rem;
+      }
+
+      .cta-button {
+         display: inline-block;
+         background: #8B4513;
+         color: white;
+         padding: 1rem 2.5rem;
+         font-size: 1.2rem;
+         text-decoration: none;
+         border-radius: 50px;
+         font-weight: 600;
+         transition: all 0.3s ease;
+         box-shadow: 0 4px 15px rgba(139, 69, 19, 0.3);
+         border: 2px solid #5D2906;
+      }
+
+      .cta-button:hover {
+         background: #5D2906;
+         transform: translateY(-3px);
+         box-shadow: 0 6px 20px rgba(139, 69, 19, 0.4);
+      }
+
+      @media (max-width: 768px) {
+         .header h1 {
+            font-size: 2.2rem;
+         }
+
+         .container {
+            padding: 1rem;
+         }
+
+         .hero-section,
+         .work-section,
+         .testimonial-section,
+         .map-section {
+            padding: 1.5rem;
+         }
+
+         .gallery-container,
+         .services-list {
+            grid-template-columns: 1fr;
+         }
+      }
+   </style>
+</head>
+
+<body>
+   <header class="header">
+      <h1>Souderton's #1 Wood Window Restoration Specialists</h1>
+      <p>We are the local experts for historic wood restoration in Souderton. We understand the architecture and common issues in your neighborhood.</p>
+   </header>
+
+   <div class="container">
+      <section class="hero-section">
+         <h2>Proudly Serving Souderton's Historic Homes Since 2010</h2>
+         <p>With over a decade of experience restoring the beautiful Victorian and Colonial homes that define Souderton's character, we understand the unique challenges and architectural details that make your historic windows special.</p>
+
+         <div class="local-proof">
+            <h3>Local Expertise You Can Trust</h3>
+            <p>From the grand Victorians along Broad Street to the charming Colonials near Souderton Park, we've restored over 500 windows throughout Souderton, ensuring each project maintains the town's distinctive architectural heritage.</p>
+         </div>
+      </section>
+
+      <section class="work-section">
+         <h2>Our Work in Souderton, PA</h2>
+         <div class="gallery-container">
+            <div class="gallery-item">
+               <img src="https://placehold.co/400x200/8B4513/FFFFFF?text=Victorian+Home+Restoration" alt="Victorian home window restoration in Souderton">
+               <div class="gallery-content">
+                  <h3>Victorian Home on Broad Street</h3>
+                  <p>Complete restoration of 12 original windows in this 1890s Victorian beauty, including rot repair, glazing, and custom storm installation.</p>
+               </div>
+            </div>
+            <div class="gallery-item">
+               <img src="https://placehold.co/400x200/5D2906/FFFFFF?text=Colonial+Window+Restoration" alt="Colonial window restoration in Souderton">
+               <div class="gallery-content">
+                  <h3>Colonial Home Near Souderton Park</h3>
+                  <p>Historic glazing and weatherization of 8 original double-hung windows, preserving the home's authentic 1920s character.</p>
+               </div>
+            </div>
+            <div class="gallery-item">
+               <img src="https://placehold.co/400x200/8B4513/FFFFFF?text=Historic+Door+Restoration" alt="Historic door restoration in Souderton">
+               <div class="gallery-content">
+                  <h3>Historic Front Door Restoration</h3>
+                  <p>Complete restoration of a 100-year-old oak front door with original hardware, including epoxy consolidation and traditional finishing.</p>
+               </div>
+            </div>
+         </div>
+      </section>
+
+      <section class="testimonial-section">
+         <h2>What Souderton Homeowners Say</h2>
+         <div class="testimonial-content">
+            I was worried about replacing the beautiful original windows in my 1910 Colonial, but the team at [Company Name] showed me that restoration was not only possible but the better choice. They completely transformed my windows - they look better than new and operate perfectly. The attention to detail and respect for the historic character was impressive. Best of all, it cost 40% less than replacement. Highly recommend their local expertise!
+            <div class="customer-name">Jennifer & Robert Thompson</div>
+            <div class="customer-location">Souderton, PA</div>
+         </div>
+      </section>
+
+      <section class="map-section">
+         <h2>Serving Souderton and Surrounding Areas</h2>
+         <div class="map-placeholder">
+            <p>Interactive Map of Souderton Service Area</p>
+         </div>
+
+         <h3>Our Local Services in Souderton Include:</h3>
+         <div class="services-list">
+            <div class="service-item">
+               <h3>Window Sash Restoration</h3>
+               <p>Complete restoration of original double-hung and casement windows with traditional techniques and materials.</p>
+            </div>
+            <div class="service-item">
+               <h3>Door Restoration</h3>
+               <p>Historic door restoration including hardware repair, wood stabilization, and authentic finishing.</p>
+            </div>
+            <div class="service-item">
+               <h3>Epoxy Consolidation</h3>
+               <p>Advanced wood preservation techniques to stabilize and strengthen deteriorated historic elements.</p>
+            </div>
+            <div class="service-item">
+               <h3>Historic Glazing</h3>
+               <p>Traditional glazing with period-appropriate materials to maintain authentic profiles and appearance.</p>
+            </div>
+            <div class="service-item">
+               <h3>Weatherization</h3>
+               <p>Energy efficiency improvements using historically appropriate weatherstripping and sealing methods.</p>
+            </div>
+            <div class="service-item">
+               <h3>Emergency Repairs</h3>
+               <p>24/7 emergency service for storm damage, water infiltration, and urgent structural repairs.</p>
+            </div>
+         </div>
+      </section>
+
+      <section class="cta-section">
+         <h2>Experience Souderton's Finest Wood Restoration</h2>
+         <p>Schedule your free on-site assessment with our local experts who understand Souderton's historic architecture and your home's unique needs.</p>
+         <a href="#contact" class="cta-button">Schedule Your Free On-Site Assessment in Souderton Today!</a>
+      </section>
+   </div>
+
+   <script>
+      document.querySelector('.cta-button').addEventListener('click', function(e) {
+         e.preventDefault();
+         alert('Thank you for your interest! In a real implementation, this would open a scheduling form for Souderton area assessments.');
+      });
+   </script>
+</body>
+
+</html>
