@@ -5,6 +5,47 @@
    <meta charset="UTF-8">
    <meta name="viewport" content="width=device-width, initial-scale=1.0">
    <title>Souderton's #1 Wood Window & Door Restoration | Historic Home Specialists</title>
+   <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "LocalBusiness",
+      "name": "Heritage Wood Restoration",
+      "image": "",
+      "@id": "",
+      "url": "",
+      "telephone": "(215) 555-WOOD",
+      "priceRange": "$$$",
+      "address": {
+        "@type": "PostalAddress",
+        "streetAddress": "123 Main Street",
+        "addressLocality": "Souderton",
+        "addressRegion": "PA",
+        "postalCode": "18964",
+        "addressCountry": "US"
+      },
+      "geo": {
+        "@type": "GeoCoordinates",
+        "latitude": 40.3106,
+        "longitude": -75.3257
+      },
+      "openingHoursSpecification": {
+        "@type": "OpeningHoursSpecification",
+        "dayOfWeek": [
+          "Monday",
+          "Tuesday",
+          "Wednesday",
+          "Thursday",
+          "Friday"
+        ],
+        "opens": "08:00",
+        "closes": "17:00"
+      },
+      "sameAs": [
+        "https://www.facebook.com/yourprofile",
+        "https://www.instagram.com/yourprofile"
+      ] 
+    }
+    </script>
    <style>
       * {
          margin: 0;
@@ -13,7 +54,7 @@
       }
 
       body {
-         font-family: 'Georgia', serif;
+         font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, Helvetica, Arial, sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol";
          line-height: 1.6;
          color: #2c3e50;
       }
@@ -38,12 +79,14 @@
          justify-content: space-between;
          align-items: center;
          padding: 15px 0;
+         position: relative;
       }
 
       .logo {
          font-size: 24px;
          font-weight: bold;
          color: #8b4513;
+         font-family: 'Georgia', serif;
       }
 
       .nav-links {
@@ -62,6 +105,24 @@
       .nav-links a:hover {
          color: #8b4513;
       }
+      
+      .hamburger {
+         display: none;
+         background: none;
+         border: none;
+         cursor: pointer;
+         padding: 10px;
+         z-index: 101;
+      }
+      .hamburger span {
+         display: block;
+         width: 25px;
+         height: 3px;
+         background-color: #2c3e50;
+         margin: 5px 0;
+         transition: 0.4s;
+      }
+
 
       /* Hero Section */
       .hero {
@@ -75,6 +136,7 @@
          font-size: 3.2em;
          margin-bottom: 20px;
          text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.3);
+         font-family: 'Georgia', serif;
       }
 
       .hero .subtitle {
@@ -95,13 +157,16 @@
       .cta-button {
          background: #ff6b35;
          color: white;
-         padding: 18px 40px;
+         padding: 12px 40px;
+         min-height: 44px;
          font-size: 1.2em;
          border: none;
          border-radius: 50px;
          cursor: pointer;
          text-decoration: none;
-         display: inline-block;
+         display: inline-flex;
+         align-items: center;
+         justify-content: center;
          font-weight: bold;
          transition: all 0.3s;
          box-shadow: 0 4px 15px rgba(255, 107, 53, 0.4);
@@ -137,7 +202,7 @@
       /* Authority Badges */
       .authority {
          background: #f8f9fa;
-         padding: 60px 0;
+         padding: 80px 0;
       }
 
       .badges {
@@ -271,6 +336,11 @@
       .case-study-card:hover {
          transform: translateY(-5px);
          box-shadow: 0 10px 25px rgba(0,0,0,0.15);
+      }
+      .case-study-card img {
+         width: 100%;
+         height: auto;
+         display: block;
       }
       .case-study-content {
          padding: 30px;
@@ -450,6 +520,30 @@
          display: block;
       }
 
+      /* Google Business Profile Section */
+      .gmb {
+          padding: 80px 0;
+          background: #fff;
+      }
+      .gmb-container {
+          display: flex;
+          gap: 30px;
+          align-items: center;
+      }
+      .gmb-map {
+          flex: 1;
+      }
+      .gmb-map iframe {
+          width: 100%;
+          height: 400px;
+          border: 0;
+          border-radius: 15px;
+      }
+      .gmb-info {
+          flex: 1;
+      }
+
+
       /* Footer */
       .footer {
          background: #2c3e50;
@@ -471,12 +565,17 @@
          align-items: center;
          gap: 10px;
       }
+      .contact-item a {
+         color: white;
+         text-decoration: none;
+      }
 
       .section-title {
          text-align: center;
          margin-bottom: 20px;
          font-size: 2.5em;
          color: #2c3e50;
+         font-family: 'Georgia', serif;
       }
 
       .section-subtitle {
@@ -488,17 +587,61 @@
 
       /* Responsive Design */
       @media (max-width: 768px) {
+         body {
+            font-size: 16px;
+         }
+         
          .hero h1 {
             font-size: 2.2em;
          }
 
          .nav-links {
             display: none;
+            position: absolute;
+            top: 65px; /* Adjust based on header height */
+            right: 0;
+            background: white;
+            width: 100%;
+            flex-direction: column;
+            text-align: center;
+            box-shadow: 0 4px 8px rgba(0,0,0,0.1);
+         }
+         .nav-links.active {
+            display: flex;
+         }
+         .nav-links li {
+            padding: 15px 0;
+         }
+
+         .hamburger {
+            display: block;
+         }
+         .hamburger.active span:nth-child(1) {
+            transform: rotate(-45deg) translate(-5px, 6px);
+         }
+         .hamburger.active span:nth-child(2) {
+            opacity: 0;
+         }
+         .hamburger.active span:nth-child(3) {
+            transform: rotate(45deg) translate(-5px, -6px);
          }
 
          .contact-info {
             flex-direction: column;
             gap: 20px;
+         }
+         
+         .authority, .services, .process, .case-studies, .testimonials, .blog, .guides, .locations, .faq, .local, .gmb {
+             padding-top: 60px;
+             padding-bottom: 60px;
+         }
+         
+         .gmb-container {
+             flex-direction: column;
+         }
+
+         .logo {
+             font-size: 20px;
          }
       }
    </style>
@@ -510,7 +653,12 @@
       <div class="container">
          <nav class="nav">
             <div class="logo">🏛️ Heritage Wood Restoration</div>
-            <ul class="nav-links">
+            <button class="hamburger" id="hamburger-menu">
+               <span></span>
+               <span></span>
+               <span></span>
+            </button>
+            <ul class="nav-links" id="nav-links">
                <li><a href="about.html">About</a></li>
                <li><a href="#services">Services</a></li>
                <li><a href="#process">Process</a></li>
@@ -644,6 +792,7 @@
           <p class="section-subtitle">See how we solve real-world problems for homeowners just like you</p>
           <div class="case-studies-grid">
               <div class="case-study-card">
+                  <img src="https://placehold.co/600x400/8b4513/ffffff?text=Restored+Colonial+Window" alt="A beautifully restored colonial window with white trim and clear glass.">
                   <div class="case-study-content">
                       <h3>In-Depth: 1890s Souderton Colonial</h3>
                       <p>A detailed look at how we saved 15 "unsalvageable" windows, addressed severe rot, and achieved $7,200 in savings for the homeowner.</p>
@@ -651,6 +800,7 @@
                   </div>
               </div>
               <div class="case-study-card">
+                  <img src="https://placehold.co/600x400/a0522d/ffffff?text=Before+%26+After" alt="A split image showing a window before and after restoration, highlighting the dramatic improvement.">
                   <div class="case-study-content">
                       <h3>Transformations & Savings Gallery</h3>
                       <p>Explore multiple projects showcasing dramatic before-and-after results with exact cost savings figures for each restoration.</p>
@@ -685,6 +835,25 @@
          </div>
       </div>
    </section>
+   
+   <!-- Google Business Profile Section -->
+    <section class="gmb" id="gmb">
+        <div class="container">
+            <h2 class="section-title">Visit Us in Souderton</h2>
+            <div class="gmb-container">
+                <div class="gmb-info">
+                    <h3>Heritage Wood Restoration</h3>
+                    <p><strong>Address:</strong> 123 Main Street, Souderton, PA 18964</p>
+                    <p><strong>Hours:</strong> Mon-Fri, 8:00 AM - 5:00 PM</p>
+                    <p>Come visit our workshop or check out our reviews on Google!</p>
+                    <!-- This would be a great place for a Google Reviews widget -->
+                </div>
+                <div class="gmb-map">
+                    <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3044.439882894101!2d-75.3278846846089!3d40.31060497937747!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x89c4211a35a51567%3A0x554a735e16f2e5d0!2sSouderton%2C%20PA%2018964!5e0!3m2!1sen!2sus!4v1660788353835!5m2!1sen!2sus" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+                </div>
+            </div>
+        </div>
+    </section>
 
    <!-- BLOG SECTION -->
    <section class="blog" id="blog">
@@ -797,14 +966,14 @@
                <div class="location-card-content">
                   <h3>Wood Window Restoration in Souderton</h3>
                   <p>Discover our expert services for Souderton's beautiful Victorian and Colonial homes.</p>
-                  <a href="locations/Wood%20Window%20Restoration%20in%20Souderton,%20PA.html">Souderton Services &rarr;</a>
+                  <a href="locations/souderton-pa-service-area.html">Souderton Services &rarr;</a>
                </div>
             </div>
             <div class="location-card">
                <div class="location-card-content">
                   <h3>Historic Door Repair in Telford</h3>
                   <p>Explore our specialized door restoration for the unique Craftsman and Victorian homes in Telford.</p>
-                  <a href="locations/Historic%20Door%20Repair%20in%20Telford.html">Telford Services &rarr;</a>
+                  <a href="locations/telford-pa-service-area.html">Telford Services &rarr;</a>
                </div>
             </div>
          </div>
@@ -847,17 +1016,17 @@
       <div class="container">
          <h2 style="margin-bottom: 30px;">Ready to Restore Your Historic Windows?</h2>
          <div class="contact-info">
+             <div class="contact-item">
+               <span>📍</span>
+               <span><strong>Address:</strong> 123 Main Street, Souderton, PA 18964</span>
+            </div>
             <div class="contact-item">
                <span>📞</span>
-               <span><strong>Call:</strong> (215) 555-WOOD</span>
+               <span><strong>Call:</strong> <a href="tel:215-555-WOOD">(215) 555-WOOD</a></span>
             </div>
             <div class="contact-item">
                <span>✉️</span>
                <span><strong>Email:</strong> info@heritagewoodrestoration.com</span>
-            </div>
-            <div class="contact-item">
-               <span>📍</span>
-               <span><strong>Serving:</strong> All of Bucks County, PA</span>
             </div>
          </div>
          <a href="#" class="cta-button" style="margin-bottom: 30px;">Schedule Your FREE Assessment</a>
@@ -894,6 +1063,16 @@
             });
          });
       });
+      
+      // Hamburger menu toggle
+      const hamburgerMenu = document.getElementById('hamburger-menu');
+      const navLinks = document.getElementById('nav-links');
+
+      hamburgerMenu.addEventListener('click', () => {
+          navLinks.classList.toggle('active');
+          hamburgerMenu.classList.toggle('active');
+      });
+
    </script>
 </body>
 
